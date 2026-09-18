@@ -1,1 +1,421 @@
-__L3__
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Return of the Huarango | CAM R1 Vocab - Animals</title>
+<style>
+:root{
+  --bg:#f7f6f2; --card:#ffffff; --navy:#0f2340; --navy2:#16345c;
+  --accent:#2b6cb0; --accent-light:#eaf2fb; --border:#d8dee6; --text:#1c2530;
+  --muted:#5b6672; --correct:#1f7a4d; --incorrect:#b3261e;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;}
+a{color:var(--accent);}
+.container{max-width:960px;margin:0 auto;padding:24px 20px 60px;}
+header.top{background:var(--navy);color:#fff;padding:20px;}
+header.top .container{padding-top:0;padding-bottom:0;}
+h1{color:var(--navy);font-size:1.6rem;margin:0 0 4px;}
+h2{color:var(--navy2);font-size:1.25rem;margin-top:2rem;border-bottom:2px solid var(--border);padding-bottom:8px;}
+.badge{display:inline-block;background:var(--accent-light);color:var(--navy2);border:1px solid var(--border);padding:4px 10px;border-radius:20px;font-size:0.8rem;margin-right:8px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:16px;}
+.btn{display:inline-block;background:var(--accent);color:#fff;border:none;padding:10px 18px;border-radius:6px;font-size:0.95rem;cursor:pointer;text-decoration:none;}
+.btn:hover{background:var(--navy2);}
+.btn:focus,button:focus,input:focus,a:focus{outline:3px solid #ffb703;outline-offset:2px;}
+.btn.secondary{background:#fff;color:var(--navy2);border:1px solid var(--accent);}
+.btn:disabled{opacity:0.6;cursor:not-allowed;}
+table{width:100%;border-collapse:collapse;margin-top:10px;}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);font-size:0.92rem;vertical-align:top;}
+th{background:var(--accent-light);color:var(--navy2);}
+input[type=text],input[type=search]{padding:8px 10px;border:1px solid var(--border);border-radius:6px;width:100%;max-width:320px;font-size:0.95rem;}
+.q-card{border:1px solid var(--border);border-radius:8px;padding:16px;margin-bottom:14px;background:#fff;}
+.q-card.unanswered{border-color:var(--incorrect);}
+.opt{display:block;padding:8px 10px;border:1px solid var(--border);border-radius:6px;margin-bottom:8px;cursor:pointer;}
+.opt:hover{background:var(--accent-light);}
+.opt input{margin-right:8px;}
+.progress{color:var(--muted);font-size:0.9rem;margin-bottom:10px;}
+.result-correct{color:var(--correct);font-weight:600;}
+.result-incorrect{color:var(--incorrect);font-weight:600;}
+.explain{background:#fff7e6;border:1px solid #f0d9a0;border-radius:6px;padding:10px;margin-top:8px;font-size:0.92rem;}
+.hidden{display:none;}
+.flash-card{background:#fff;border:1px solid var(--border);border-radius:10px;min-height:220px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;cursor:pointer;font-size:1.1rem;}
+.flash-front{font-size:1.4rem;font-weight:700;color:var(--navy);}
+.flash-back{font-size:0.95rem;text-align:left;width:100%;}
+.flash-back p{margin:4px 0;}
+.nav-row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
+.lesson-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:16px;}
+.lesson-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;}
+.lesson-card h3{margin:0 0 6px;color:var(--navy2);font-size:1.05rem;}
+.meta{color:var(--muted);font-size:0.85rem;margin-bottom:10px;}
+footer.note{margin-top:30px;padding:16px;background:var(--accent-light);border:1px solid var(--border);border-radius:8px;font-size:0.88rem;color:var(--navy2);}
+.error-msg{color:var(--incorrect);font-weight:600;margin-top:8px;}
+.success-msg{color:var(--correct);font-weight:600;margin-top:8px;}
+label{display:block;margin-bottom:6px;font-weight:600;color:var(--navy2);}
+.field{margin-bottom:14px;}
+@media (max-width:600px){table,thead,tbody,th,td,tr{display:block;} th{display:none;} td{border:none;padding:4px 0;} td:before{content:attr(data-label) ": ";font-weight:600;color:var(--navy2);} tr{border-bottom:1px solid var(--border);padding-bottom:8px;margin-bottom:8px;}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="container">
+    <a href="index.html" class="btn secondary" style="margin-bottom:10px;display:inline-block;">&larr; Back to Dashboard</a>
+    <h1 style="color:#fff;">The Return of the Huarango</h1>
+    <p><span class="badge">CAM 15 - TEST 4 - READING PASSAGE 1</span><span class="badge">Conservation and Ecology - Native Species Restoration - Ecosystem Protection</span></p>
+  </div>
+</header>
+<main class="container">
+
+  <div class="card">
+    <h2 style="margin-top:0;">Instructions</h2>
+    <p>Review the vocabulary and collocations below, then click <strong>Start Practice</strong> to begin the quiz.
+    Answer every question before submitting. After you submit, you will see your score, corrections in Vietnamese,
+    and an official submission form. Flashcards unlock automatically once your official submission succeeds.</p>
+  </div>
+
+  <section id="vocab-section">
+    <h2>1. Vocabulary Review</h2>
+    <div class="card">
+      <input type="search" id="vocab-search" placeholder="Search vocabulary or collocations..." aria-label="Search vocabulary">
+      <table>
+        <thead><tr><th>No.</th><th>Word</th><th>POS</th><th>IPA</th><th>Vietnamese meaning</th><th>Synonyms</th></tr></thead>
+        <tbody id="vocab-tbody"></tbody>
+      </table>
+      <h3 style="color:var(--navy2);margin-top:20px;">Collocations</h3>
+      <table>
+        <thead><tr><th>No.</th><th>Collocation</th><th>Meaning</th></tr></thead>
+        <tbody id="colloc-tbody"></tbody>
+      </table>
+      <div class="nav-row"><button class="btn" onclick="startPractice()">Start Practice</button></div>
+    </div>
+  </section>
+
+  <section id="quiz-section" class="hidden">
+    <h2>2. Quiz</h2>
+    <div class="card">
+      <p class="progress" id="q-progress"></p>
+      <div id="question-area"></div>
+      <p class="error-msg hidden" id="quiz-error" role="alert"></p>
+      <div class="nav-row">
+        <button class="btn secondary" id="prev-btn" onclick="prevQ()">Previous</button>
+        <button class="btn" id="next-btn" onclick="nextQ()">Next</button>
+        <button class="btn hidden" id="submit-quiz-btn" onclick="submitQuiz()">Submit Quiz</button>
+        <button class="btn secondary" onclick="backToVocab()">Back to Vocabulary</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="results-section" class="hidden">
+    <h2>3. Results and Corrections</h2>
+    <div class="card">
+      <p id="score-summary" style="font-size:1.1rem;font-weight:700;color:var(--navy);"></p>
+      <div id="results-review"></div>
+      <div class="nav-row"><button class="btn secondary" onclick="retakeQuiz()">Revise Answers / Retake</button></div>
+    </div>
+
+    <h2>4. Official Score Submission</h2>
+    <div class="card">
+      <p>Email submission is the <strong>only official completion record</strong> for this lesson. Completing the quiz alone is not recorded officially.</p>
+      <form id="official-form" onsubmit="officialSubmit(event)">
+        <div class="field">
+          <label for="student-name">Full name (required)</label>
+          <input type="text" id="student-name" name="student-name" required>
+        </div>
+        <div class="field">
+          <label for="student-class">Class (required)</label>
+          <input type="text" id="student-class" name="student-class" required>
+        </div>
+        <button type="submit" class="btn" id="official-submit-btn">Submit Official Result</button>
+      </form>
+      <p class="hidden" id="submit-progress"></p>
+      <p class="error-msg hidden" id="submit-error" role="alert"></p>
+      <p class="success-msg hidden" id="submit-success" role="status"></p>
+    </div>
+  </section>
+
+  <section id="flashcards-section" class="hidden">
+    <h2>5. Flashcards</h2>
+    <div class="card">
+      <p>Flashcards cover this lesson's vocabulary and collocations. Click the card or press Enter/Space to flip.</p>
+      <div class="flash-card" id="flash-card" tabindex="0" role="button" aria-label="Flashcard, click or press Enter to flip" onclick="flipCard()">Loading...</div>
+      <p class="progress" id="flash-progress"></p>
+      <div class="nav-row">
+        <button class="btn secondary" onclick="prevCard()">Previous</button>
+        <button class="btn secondary" onclick="nextCard()">Next</button>
+        <button class="btn secondary" onclick="shuffleCards()">Shuffle</button>
+        <button class="btn secondary" onclick="resetCards()">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="note">
+    Email submission via Web3Forms is the only official completion record for this lesson. Browser storage or a completed
+    quiz alone is never treated as an official record.
+  </footer>
+</main>
+<script>
+const WEB3FORMS_ACCESS_KEY = "5d931409-e955-472f-818b-233d9b482321";
+const LESSON = {"id":"CAM 15 - TEST 4 - READING PASSAGE 1","title":"The Return of the Huarango","topic":"Conservation and Ecology - Native Species Restoration - Ecosystem Protection","vocab":[{"word":"arid","pos":"adj","ipa":"arid","meaning":"kho han, can coi","synonyms":"dry, parched, barren","sentence":"The conditions were considered highly arid."},{"word":"fragile","pos":"adj","ipa":"fragile","meaning":"de bi ton thuong","synonyms":"delicate, vulnerable, sensitive","sentence":"Analysts described the outcome as fragile."},{"word":"subsoil","pos":"n","ipa":"subsoil","meaning":"lop dat ben duoi","synonyms":"underlying soil, lower stratum","sentence":"This report discusses the subsoil in detail."},{"word":"withstand","pos":"v","ipa":"withstand","meaning":"chiu dung, chong chiu","synonyms":"endure, resist, tolerate","sentence":"Local communities tried to withstand the problem effectively."},{"word":"drought","pos":"n","ipa":"drought","meaning":"nan han han","synonyms":"dry spell, lack of rain","sentence":"Researchers highlighted the drought as a key issue."},{"word":"erosion","pos":"n","ipa":"erosion","meaning":"su an mon","synonyms":"wearing away, degradation","sentence":"This report discusses the erosion in detail."},{"word":"pod","pos":"n","ipa":"pod","meaning":"vo hat, qua dau","synonyms":"shell, casing, capsule","sentence":"The pod played an important role in this context."},{"word":"bark","pos":"n","ipa":"bark","meaning":"vo cay","synonyms":"tree covering, outer layer","sentence":"Researchers highlighted the bark as a key issue."},{"word":"smallholding","pos":"n","ipa":"smallholding","meaning":"trang trai nho","synonyms":"small farm, plot of land","sentence":"This report discusses the smallholding in detail."},{"word":"ethnobotanist","pos":"n","ipa":"ethnobotanist","meaning":"nha thuc vat hoc dan toc","synonyms":"plant scholar, plant expert","sentence":"The ethnobotanist played an important role in this context."},{"word":"prejudice","pos":"n","ipa":"prejudice","meaning":"dinh kien, thanh kien","synonyms":"bias, preconception, stigma","sentence":"Researchers highlighted the prejudice as a key issue."},{"word":"aspirational","pos":"adj","ipa":"aspirational","meaning":"co tham vong","synonyms":"ambitious, striving, motivated","sentence":"The approach proved to be quite aspirational."},{"word":"resuscitation","pos":"n","ipa":"resuscitation","meaning":"su hoi sinh","synonyms":"revival, restoration, renewal","sentence":"The resuscitation played an important role in this context."},{"word":"reinstate","pos":"v","ipa":"reinstate","meaning":"phuc hoi","synonyms":"restore, bring back, re-establish","sentence":"Experts recommend that authorities reinstate this issue promptly."},{"word":"sustainable","pos":"adj","ipa":"sustainable","meaning":"ben vung","synonyms":"eco-friendly, renewable, viable","sentence":"The approach proved to be quite sustainable."},{"word":"syrup","pos":"n","ipa":"syrup","meaning":"siro, mat","synonyms":"thick liquid, nectar, molasses","sentence":"The syrup played an important role in this context."},{"word":"certified","pos":"adj","ipa":"certified","meaning":"duoc chung nhan","synonyms":"accredited, official, verified","sentence":"Analysts described the outcome as certified."},{"word":"corridor","pos":"n","ipa":"corridor","meaning":"hanh lang sinh thai","synonyms":"passage, strip, connecting zone","sentence":"This report discusses the corridor in detail."},{"word":"counteract","pos":"v","ipa":"counteract","meaning":"chong lai","synonyms":"offset, neutralize, balance","sentence":"Local communities tried to counteract the problem effectively."},{"word":"evaporation","pos":"n","ipa":"evaporation","meaning":"su bay hoi","synonyms":"drying up, vaporization","sentence":"Researchers highlighted the evaporation as a key issue."},{"word":"refuge","pos":"n","ipa":"refuge","meaning":"noi tru an","synonyms":"shelter, sanctuary, haven","sentence":"This report discusses the refuge in detail."},{"word":"bio-control","pos":"n","ipa":"bio-control","meaning":"kiem soat sinh hoc","synonyms":"natural pest control","sentence":"The bio-control played an important role in this context."},{"word":"expanse","pos":"n","ipa":"expanse","meaning":"dai dat rong lon","synonyms":"area, stretch, vastness","sentence":"Researchers highlighted the expanse as a key issue."},{"word":"exploit","pos":"v","ipa":"exploit","meaning":"khai thac, tan dung","synonyms":"utilize, make use of, harness","sentence":"The team worked hard to exploit the situation."},{"word":"roll out","pos":"v","ipa":"roll out","meaning":"trien khai rong rai","synonyms":"launch, introduce, implement","sentence":"Local communities tried to roll out the problem effectively."}],"collocations":[{"collocation":"arid valley","meaning":"thung lung kho han"},{"collocation":"fragile ecosystem","meaning":"he sinh thai de bi ton thuong"},{"collocation":"deep water source","meaning":"nguon nuoc ngam sau"},{"collocation":"herbal remedy","meaning":"phuong thuoc thao duoc"},{"collocation":"international market","meaning":"thi truong quoc te"},{"collocation":"cultural resuscitation","meaning":"su hoi sinh van hoa"},{"collocation":"sustainable income","meaning":"thu nhap ben vung"},{"collocation":"certified organic farm","meaning":"trang trai huu co duoc chung nhan"},{"collocation":"organic farmers market","meaning":"cho nong san huu co"},{"collocation":"forest corridor","meaning":"hanh lang rung sinh thai"},{"collocation":"water usage","meaning":"muc tieu thu nuoc"},{"collocation":"message of hope","meaning":"thong diep hy vong"}],"questions":[{"stem":"The coastal strip of southern Peru is described as an extremely __________ environment due to the almost total absence of rainfall.","options":["fragile ecosystem","herbal remedy","certified organic farm","sustainable income"],"correct":0,"explain":"Vung bo bien thieu mua duoc goi la fragile ecosystem.","ghinho":"Ghi nho: fragile = de ton thuong."},{"stem":"Thanks to its remarkably long root system, the native huarango tree can reach a __________ tens of metres underground.","options":["forest corridor","message of hope","international market","deep water source"],"correct":3,"explain":"Re cay huarango dai cham toi deep water source.","ghinho":"Ghi nho: deep water source = nguon nuoc ngam sau."},{"stem":"Clearing native forests destroys soil stability, which quickly leads to severe land __________ when heavy winds blow.","options":["erosion","syrup","corridor","refuge"],"correct":0,"explain":"Pha rung dan den erosion khi co gio manh.","ghinho":"Ghi nho: erosion = xoi mon dat."},{"stem":"Historically, local residents used different parts of the huarango tree as a __________ to treat various ailments.","options":["forest corridor","water usage","herbal remedy","sustainable income"],"correct":2,"explain":"Nguoi dan dung cay huarango lam herbal remedy.","ghinho":"Ghi nho: remedy = phuong thuoc."},{"stem":"Large agricultural corporations have replaced ancient woodlands with vast monoculture fields targeting the __________.","options":["herbal remedy","international market","fragile ecosystem","forest corridor"],"correct":1,"explain":"Cong ty nong nghiep thay rung co bang canh dong doc canh phuc vu international market.","ghinho":"Ghi nho: international market = thi truong quoc te."},{"stem":"To revive local interest in native plants, conservationists initiated a process of __________ through cultural festivals.","options":["water usage","deep water source","cultural resuscitation","message of hope"],"correct":2,"explain":"Nha bao ton khoi dong cultural resuscitation qua le hoi.","ghinho":"Ghi nho: resuscitation = hoi sinh."},{"stem":"Turning huarango seed pods into edible flour and syrup offers local families a potential __________.","options":["herbal remedy","sustainable income","international market","fragile ecosystem"],"correct":1,"explain":"Bien qua huarango thanh bot va siro mang lai sustainable income.","ghinho":"Ghi nho: sustainable income = thu nhap ben vung."},{"stem":"Alberto Benevides sells his processed tree products at a famous __________ located in the capital city of Lima.","options":["certified organic farm","forest corridor","organic farmers market","deep water source"],"correct":2,"explain":"Alberto Benevides ban san pham tai organic farmers market o Lima.","ghinho":"Ghi nho: farmers market = cho nong san."},{"stem":"Planting a continuous __________ across commercial farmland allows local wildlife to move freely between habitats.","options":["forest corridor","herbal remedy","water usage","message of hope"],"correct":0,"explain":"Trong forest corridor giup dong vat hoang da di chuyen.","ghinho":"Ghi nho: corridor = hanh lang."},{"stem":"Shading crops with native trees helps lower overall __________ by significantly slowing moisture evaporation.","options":["message of hope","water usage","herbal remedy","forest corridor"],"correct":1,"explain":"Che bong cay giup giam water usage.","ghinho":"Ghi nho: water usage = muc tieu thu nuoc."},{"stem":"Successful reforestation in dry zones provides a powerful __________ for other drought-stricken areas around the globe.","options":["water usage","deep water source","fragile ecosystem","message of hope"],"correct":3,"explain":"Trong rung thanh cong la message of hope cho khu vuc han han khac.","ghinho":"Ghi nho: message of hope = thong diep hy vong."},{"stem":"The word arid in the passage is closest in meaning to:","options":["dry","humid","fertile","cold"],"correct":0,"explain":"Arid nghia la kho han, dong nghia dry.","ghinho":"Ghi nho: arid = dry."},{"stem":"The word withstand in the passage is closest in meaning to:","options":["avoid","cause","endure","prevent"],"correct":2,"explain":"Withstand nghia la chiu dung, dong nghia endure.","ghinho":"Ghi nho: withstand = endure."},{"stem":"The word reinstate in the passage is closest in meaning to:","options":["destroy","restore","abandon","criticize"],"correct":1,"explain":"Reinstate nghia la phuc hoi, dong nghia restore.","ghinho":"Ghi nho: reinstate = restore."},{"stem":"The word refuge in the passage is closest in meaning to:","options":["hazard","obstacle","sanctuary","target"],"correct":2,"explain":"Refuge nghia la noi tru an, dong nghia sanctuary.","ghinho":"Ghi nho: refuge = sanctuary."},{"stem":"The word exploit is closest in meaning to:","options":["utilize","waste","ignore","restrict"],"correct":0,"explain":"Exploit nghia la khai thac, dong nghia utilize.","ghinho":"Ghi nho: exploit = utilize."},{"stem":"The word counteract is closest in meaning to:","options":["support","offset","accelerate","ignore"],"correct":1,"explain":"Counteract nghia la chong lai, dong nghia offset.","ghinho":"Ghi nho: counteract = offset."},{"stem":"The word fragile is closest in meaning to:","options":["robust","stable","delicate","powerful"],"correct":2,"explain":"Fragile nghia la de bi ton thuong, dong nghia delicate.","ghinho":"Ghi nho: fragile = delicate."},{"stem":"The word prejudice is closest in meaning to:","options":["knowledge","bias","respect","wisdom"],"correct":1,"explain":"Prejudice nghia la dinh kien, dong nghia bias.","ghinho":"Ghi nho: prejudice = bias."},{"stem":"The word roll out is closest in meaning to:","options":["withdraw","cancel","implement","delay"],"correct":2,"explain":"Roll out nghia la trien khai rong rai, dong nghia implement.","ghinho":"Ghi nho: roll out = implement."}]};
+
+let currentQ = 0;
+let answers = new Array(LESSON.questions.length).fill(null);
+let submittedQuiz = false;
+let flashIdx = 0;
+let flashFlipped = false;
+let flashOrder = [];
+let officiallySubmitted = false;
+
+function $(sel){return document.querySelector(sel);}
+
+function renderVocabTable(filter){
+  filter = (filter||"").toLowerCase();
+  const tbody = $("#vocab-tbody");
+  tbody.innerHTML = "";
+  LESSON.vocab.forEach((v,i)=>{
+    const hay = (v.word+" "+v.pos+" "+v.meaning+" "+v.synonyms).toLowerCase();
+    if(filter && !hay.includes(filter)) return;
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td data-label="No.">${i+1}</td>
+      <td data-label="Word"><strong>${v.word}</strong></td>
+      <td data-label="POS">${v.pos}</td>
+      <td data-label="IPA">${v.ipa}</td>
+      <td data-label="Vietnamese meaning">${v.meaning}</td>
+      <td data-label="Synonyms">${v.synonyms}</td>`;
+    tbody.appendChild(tr);
+  });
+  const ctbody = $("#colloc-tbody");
+  if(ctbody){
+    ctbody.innerHTML = "";
+    LESSON.collocations.forEach((c,i)=>{
+      const hay = (c.collocation+" "+c.meaning).toLowerCase();
+      if(filter && !hay.includes(filter)) return;
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td data-label="No.">${i+1}</td><td data-label="Collocation"><strong>${c.collocation}</strong></td><td data-label="Meaning">${c.meaning}</td>`;
+      ctbody.appendChild(tr);
+    });
+  }
+}
+
+function startPractice(){
+  $("#vocab-section").classList.add("hidden");
+  $("#quiz-section").classList.remove("hidden");
+  currentQ = 0;
+  renderQuestion();
+}
+
+function backToVocab(){
+  $("#quiz-section").classList.add("hidden");
+  $("#vocab-section").classList.remove("hidden");
+}
+
+function renderQuestion(){
+  const total = LESSON.questions.length;
+  const q = LESSON.questions[currentQ];
+  $("#q-progress").textContent = `Question ${currentQ+1} of ${total}`;
+  let optsHtml = "";
+  q.options.forEach((opt,i)=>{
+    const checked = answers[currentQ]===i ? "checked" : "";
+    optsHtml += `<label class="opt"><input type="radio" name="opt" value="${i}" ${checked} onchange="selectAnswer(${i})"> ${String.fromCharCode(65+i)}. ${opt}</label>`;
+  });
+  $("#question-area").innerHTML = `<div class="q-card"><p><strong>Question ${currentQ+1}:</strong> ${q.stem}</p>${optsHtml}</div>`;
+  $("#prev-btn").disabled = currentQ===0;
+  $("#next-btn").classList.toggle("hidden", currentQ>=total-1);
+  $("#submit-quiz-btn").classList.toggle("hidden", currentQ<total-1);
+}
+
+function selectAnswer(i){ answers[currentQ]=i; }
+function nextQ(){ if(currentQ<LESSON.questions.length-1){currentQ++; renderQuestion();} }
+function prevQ(){ if(currentQ>0){currentQ--; renderQuestion();} }
+
+function submitQuiz(){
+  const unanswered = [];
+  answers.forEach((a,i)=>{ if(a===null) unanswered.push(i+1); });
+  if(unanswered.length>0){
+    $("#quiz-error").textContent = `Please answer all questions before submitting. Unanswered: Question ${unanswered.join(", ")}.`;
+    $("#quiz-error").classList.remove("hidden");
+    currentQ = unanswered[0]-1;
+    renderQuestion();
+    return;
+  }
+  $("#quiz-error").classList.add("hidden");
+  submittedQuiz = true;
+  renderResults();
+  $("#quiz-section").classList.add("hidden");
+  $("#results-section").classList.remove("hidden");
+}
+
+function computeScore(){
+  let score = 0;
+  LESSON.questions.forEach((q,i)=>{ if(answers[i]===q.correct) score++; });
+  return score;
+}
+
+function renderResults(){
+  const total = LESSON.questions.length;
+  const score = computeScore();
+  const pct = Math.round((score/total)*1000)/10;
+  $("#score-summary").textContent = `You scored ${score} / ${total} (${pct}%)`;
+  let html = "";
+  LESSON.questions.forEach((q,i)=>{
+    const userIdx = answers[i];
+    const correctIdx = q.correct;
+    const isCorrect = userIdx===correctIdx;
+    html += `<div class="q-card">
+      <p><strong>Question ${i+1}:</strong> ${q.stem}</p>
+      <p>Your answer: ${String.fromCharCode(65+userIdx)}. ${q.options[userIdx]} - <span class="${isCorrect?'result-correct':'result-incorrect'}">${isCorrect?'Correct':'Incorrect'}</span></p>`;
+    if(!isCorrect){
+      html += `<p>Correct answer: ${String.fromCharCode(65+correctIdx)}. ${q.options[correctIdx]}</p>
+      <div class="explain"><p><em>Explanation:</em> ${q.explain}</p><p><em>Note:</em> ${q.ghinho}</p></div>`;
+    }
+    html += `</div>`;
+  });
+  $("#results-review").innerHTML = html;
+}
+
+function retakeQuiz(){
+  answers = new Array(LESSON.questions.length).fill(null);
+  submittedQuiz = false;
+  currentQ = 0;
+  $("#results-section").classList.add("hidden");
+  $("#quiz-section").classList.remove("hidden");
+  renderQuestion();
+}
+
+function buildReviewSummary(){
+  return LESSON.questions.map((q,i)=>{
+    const userIdx = answers[i];
+    const correctIdx = q.correct;
+    const status = userIdx===correctIdx ? "Correct" : "Incorrect";
+    return `Q${i+1}: Selected=${String.fromCharCode(65+userIdx)} (${q.options[userIdx]}) | Correct=${String.fromCharCode(65+correctIdx)} (${q.options[correctIdx]}) | ${status}`;
+  }).join("\n");
+}
+
+function buildCorrectionsSummary(){
+  const lines = [];
+  LESSON.questions.forEach((q,i)=>{
+    const userIdx = answers[i];
+    if(userIdx!==q.correct){
+      lines.push(`Q${i+1}: ${q.stem}\n  Explanation: ${q.explain}\n  Note: ${q.ghinho}`);
+    }
+  });
+  return lines.length ? lines.join("\n\n") : "None - all correct.";
+}
+
+async function officialSubmit(ev){
+  ev.preventDefault();
+  const name = $("#student-name").value.trim();
+  const cls = $("#student-class").value.trim();
+  const errEl = $("#submit-error");
+  const successEl = $("#submit-success");
+  errEl.classList.add("hidden");
+  successEl.classList.add("hidden");
+  if(!name || !cls){
+    errEl.textContent = "Full name and Class are both required.";
+    errEl.classList.remove("hidden");
+    return;
+  }
+  const score = computeScore();
+  const total = LESSON.questions.length;
+  const pct = Math.round((score/total)*1000)/10;
+  const now = new Date();
+  const timestamp = now.toLocaleString();
+  const btn = $("#official-submit-btn");
+  btn.disabled = true;
+  const progressEl = $("#submit-progress");
+  progressEl.textContent = "Submitting your official result, please wait...";
+  progressEl.classList.remove("hidden");
+
+  const formData = new FormData();
+  formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+  formData.append("subject", `CAM R1 Vocab Submission | ${LESSON.id} | ${name}`);
+  formData.append("from_name", "CAM R1 Vocab - Animals");
+  formData.append("Student Full Name", name);
+  formData.append("Class", cls);
+  formData.append("Lesson Identifier", LESSON.id);
+  formData.append("Lesson Title", LESSON.title);
+  formData.append("Topic", LESSON.topic);
+  formData.append("Score", `${score}/${total}`);
+  formData.append("Percentage", `${pct}%`);
+  formData.append("Submission Timestamp", timestamp);
+  formData.append("Selected Answers", answers.map((a,i)=>`Q${i+1}:${String.fromCharCode(65+a)}`).join(", "));
+  formData.append("Correct Answers", LESSON.questions.map((q,i)=>`Q${i+1}:${String.fromCharCode(65+q.correct)}`).join(", "));
+  formData.append("Answer Review Summary", buildReviewSummary());
+  formData.append("Corrections Summary", buildCorrectionsSummary());
+
+  try{
+    const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
+    const data = await res.json();
+    if(data.success){
+      officiallySubmitted = true;
+      successEl.textContent = `Officially submitted. ${name} - ${LESSON.title} - Score: ${score}/${total} (${pct}%) - Submitted at ${timestamp}.`;
+      successEl.classList.remove("hidden");
+      $("#flashcards-section").classList.remove("hidden");
+      initFlashcards();
+      progressEl.classList.add("hidden");
+    } else {
+      throw new Error(data.message || "Submission failed");
+    }
+  } catch(e){
+    errEl.textContent = "Submission failed. Your results are saved on this page - please check your connection and try again.";
+    errEl.classList.remove("hidden");
+    progressEl.classList.add("hidden");
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+function buildFlashcardDeck(){
+  const cards = [];
+  LESSON.vocab.forEach(v=>{
+    cards.push({front:v.word, pos:v.pos, ipa:v.ipa, meaning:v.meaning, synonyms:v.synonyms, sentence:v.sentence});
+  });
+  LESSON.collocations.forEach(c=>{
+    cards.push({front:c.collocation, pos:"", ipa:"", meaning:c.meaning, synonyms:"", sentence:""});
+  });
+  return cards;
+}
+
+function initFlashcards(){
+  const deck = buildFlashcardDeck();
+  flashOrder = deck.map((_,i)=>i);
+  flashIdx = 0;
+  flashFlipped = false;
+  window._flashDeck = deck;
+  renderFlashcard();
+}
+
+function renderFlashcard(){
+  const deck = window._flashDeck;
+  const card = deck[flashOrder[flashIdx]];
+  const el = $("#flash-card");
+  if(!flashFlipped){
+    el.innerHTML = `<div class="flash-front">${card.front}</div>`;
+  } else {
+    el.innerHTML = `<div class="flash-back">
+      ${card.pos?`<p><strong>POS:</strong> ${card.pos}</p>`:""}
+      ${card.ipa?`<p><strong>IPA:</strong> ${card.ipa}</p>`:""}
+      <p><strong>Vietnamese meaning:</strong> ${card.meaning}</p>
+      ${card.synonyms?`<p><strong>Synonyms:</strong> ${card.synonyms}</p>`:""}
+      ${card.sentence?`<p><em>${card.sentence}</em></p>`:""}
+    </div>`;
+  }
+  $("#flash-progress").textContent = `Card ${flashIdx+1} of ${deck.length}`;
+}
+
+function flipCard(){ flashFlipped = !flashFlipped; renderFlashcard(); }
+function nextCard(){ const deck=window._flashDeck; flashIdx=(flashIdx+1)%deck.length; flashFlipped=false; renderFlashcard(); }
+function prevCard(){ const deck=window._flashDeck; flashIdx=(flashIdx-1+deck.length)%deck.length; flashFlipped=false; renderFlashcard(); }
+function shuffleCards(){
+  for(let i=flashOrder.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [flashOrder[i],flashOrder[j]]=[flashOrder[j],flashOrder[i]]; }
+  flashIdx=0; flashFlipped=false; renderFlashcard();
+}
+function resetCards(){ flashOrder = window._flashDeck.map((_,i)=>i); flashIdx=0; flashFlipped=false; renderFlashcard(); }
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  renderVocabTable("");
+  $("#vocab-search").addEventListener("input", e=>renderVocabTable(e.target.value));
+  $("#flash-card").addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); flipCard(); } });
+});
+</script>
+</body>
+</html>
