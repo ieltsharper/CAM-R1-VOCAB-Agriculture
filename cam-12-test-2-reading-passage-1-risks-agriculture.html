@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAM 12 - TEST 2 - The Risks Agriculture Faces in Developing Countries | CAM R1 Vocab</title>
+<style>:root{--bg:#f7f6f2;--navy:#12233f;--navy2:#1c3358;--blue:#2f5fa8;--blue-light:#e7edf7;--border:#d8dde5;--text:#26313f;--muted:#5b6675;--danger:#a3312a;--good:#1f7a4d;--bad:#a3312a;--focus:#1857a4}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+.wrap{max-width:960px;margin:0 auto;padding:24px 20px 64px}
+header.top{background:var(--navy);color:#fff;padding:22px 20px}
+header.top .inner{max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+header.top h1{font-size:1.35rem;margin:0;font-weight:700}
+header.top p{margin:4px 0 0;color:#c9d4e6;font-size:.92rem}
+a.backlink,button.backlink{display:inline-block;background:transparent;border:1px solid #7f93b4;color:#fff;padding:8px 14px;border-radius:6px;text-decoration:none;font-size:.88rem}
+a.backlink:hover,button.backlink:hover{background:#22406e}
+h2{color:var(--navy);font-size:1.18rem;border-bottom:2px solid var(--blue-light);padding-bottom:8px;margin-top:34px}
+h3{color:var(--navy2);font-size:1.02rem}
+.card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:16px 0}
+.panel{background:var(--blue-light);border:1px solid #c7d5ec;border-radius:10px;padding:16px 18px;margin:16px 0;font-size:.94rem}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:10px}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--navy);color:#fff;font-weight:600;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+input[type=search],input[type=text]{padding:9px 12px;border:1px solid var(--border);border-radius:6px;width:100%;font-size:.95rem}
+input[type=search]:focus,input[type=text]:focus,button:focus,a:focus,input[type=radio]:focus{outline:3px solid var(--focus);outline-offset:2px}
+button{cursor:pointer;font-size:.95rem;font-family:inherit}
+.btn-primary{background:var(--blue);color:#fff;border:none;padding:11px 22px;border-radius:6px;font-weight:600}
+.btn-primary:hover{background:var(--navy2)}
+.btn-primary:disabled{background:#93a4bd;cursor:not-allowed}
+.btn-secondary{background:#fff;color:var(--blue);border:1px solid var(--blue);padding:10px 20px;border-radius:6px;font-weight:600}
+.btn-secondary:hover{background:var(--blue-light)}
+.btn-secondary:disabled{color:#9aa6b5;border-color:#c7cdd6;cursor:not-allowed}
+.hidden{display:none!important}
+.qcard{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:14px 0}
+.qcard.unanswered{border-color:var(--danger)}
+.qstem{font-weight:600;margin-bottom:12px}
+.options label{display:block;background:#fafbfc;border:1px solid var(--border);border-radius:6px;padding:9px 12px;margin:6px 0;cursor:pointer}
+.options label:hover{border-color:var(--blue)}
+.options input{margin-right:9px}
+.progress{color:var(--muted);font-size:.9rem;margin-bottom:6px}
+.nav-row{display:flex;justify-content:space-between;gap:10px;margin-top:16px;flex-wrap:wrap}
+.error-msg{color:var(--danger);font-weight:600;font-size:.88rem;margin-top:6px}
+.result-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-weight:700;font-size:.82rem}
+.badge-correct{background:#e2f3e9;color:var(--good)}
+.badge-incorrect{background:#f8e7e5;color:var(--bad)}
+.review-card{border-left:4px solid var(--border)}
+.review-card.correct{border-left-color:var(--good)}
+.review-card.incorrect{border-left-color:var(--bad)}
+.explain{background:#fdf6ee;border:1px solid #eadfc9;border-radius:6px;padding:10px 12px;margin-top:10px;font-size:.9rem}
+.ghinho{font-weight:600;color:var(--navy2);margin-top:6px}
+.score-banner{background:var(--navy);color:#fff;border-radius:10px;padding:20px;text-align:center;margin:20px 0}
+.score-banner .big{font-size:2.1rem;font-weight:800}
+label.field{display:block;margin:12px 0;font-weight:600;font-size:.9rem}
+label.field input{display:block;margin-top:6px;font-weight:400;width:100%;max-width:420px}
+.form-msg{margin-top:12px;font-weight:600}
+.form-msg.ok{color:var(--good)}
+.form-msg.err{color:var(--bad)}
+.flash-lock{color:var(--muted);font-style:italic}
+.flashcard{background:#fff;border:1px solid var(--border);border-radius:12px;min-height:220px;display:flex;align-items:center;justify-content:center;text-align:center;padding:26px;cursor:pointer;font-size:1.1rem;margin:16px 0}
+.flashcard:focus{outline:3px solid var(--focus)}
+.flash-back{font-size:.92rem;text-align:left}
+.flash-back div{margin:4px 0}
+.flash-controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+footer.note{color:var(--muted);font-size:.85rem;margin-top:40px;border-top:1px solid var(--border);padding-top:14px}
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+@media (max-width:600px){table,thead,tbody,th,td,tr{font-size:.82rem}th,td{padding:6px 6px}}
+.lesson-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.lesson-card h3{margin:0;font-size:1.05rem}
+.lesson-card .meta{font-size:.85rem;color:var(--muted)}
+.lesson-card .stats{display:flex;gap:12px;font-size:.82rem;color:var(--navy2);flex-wrap:wrap}
+.start-btn{margin-top:auto;background:var(--blue);color:#fff;text-align:center;padding:10px;border-radius:6px;text-decoration:none;font-weight:700}
+.start-btn:hover{background:var(--navy2)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <div>
+      <h1>CAM 12 - TEST 2 &middot; The Risks Agriculture Faces in Developing Countries</h1>
+      <p>Topic: History • Archaeology</p>
+    </div>
+    <a class="backlink" href="index.html">&larr; Back to Dashboard</a>
+  </div>
+</header>
+<div class="wrap">
+
+  <section class="panel" aria-label="Instructions">
+    <strong>How this lesson works</strong><br>
+    Review the vocabulary and collocations below, then click <em>Start Practice</em> to answer every exercise question from this lesson in its original order. After you submit the quiz you will see your score and, for every incorrect answer, a short explanation in Vietnamese. Only an official submission (name + class, sent by email via Web3Forms) counts as your completion record &mdash; simply finishing the quiz in this browser is not official. Flashcards for this lesson's vocabulary unlock automatically after a successful official submission.
+  </section>
+
+  <section id="vocabSection">
+    <h2>1. Vocabulary Review</h2>
+    <label for="vocabSearch"><strong>Search vocabulary or collocations</strong></label>
+    <input type="search" id="vocabSearch" placeholder="Type a word, meaning, or synonym...">
+    <div class="card" style="overflow-x:auto">
+      <h3>Vocabulary</h3>
+      <table>
+        <thead><tr><th>No.</th><th>Vocabulary</th><th>POS</th><th>IPA</th><th>Vietnamese Meaning</th><th>Synonyms</th></tr></thead>
+        <tbody id="vocabBody"></tbody>
+      </table>
+    </div>
+    <div class="card" style="overflow-x:auto">
+      <h3>Collocations</h3>
+      <table>
+        <thead><tr><th>No.</th><th>Collocation</th><th>Meaning</th></tr></thead>
+        <tbody id="collocBody"></tbody>
+      </table>
+    </div>
+    <button class="btn-primary" id="startPracticeBtn">Start Practice &rarr;</button>
+  </section>
+
+  <section id="quizSection" class="hidden">
+    <h2>2. Quiz</h2>
+    <div class="qcard">
+      <div class="progress" id="qProgress">Question 1 of 20</div>
+      <div class="qstem" id="qStem"></div>
+      <div class="options" id="qOptions" role="radiogroup"></div>
+      <div class="error-msg" id="quizError" role="alert"></div>
+      <div class="nav-row">
+        <button class="btn-secondary" id="prevBtn">&larr; Previous</button>
+        <div>
+          <button class="btn-secondary" id="nextBtn">Next &rarr;</button>
+          <button class="btn-primary hidden" id="submitQuizBtn">Submit Quiz</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resultsSection" class="hidden">
+    <h2>3. Results and Corrections</h2>
+    <div class="score-banner">
+      <div class="big" id="scoreText">0 / 20 correct</div>
+      <div id="scorePct">0%</div>
+    </div>
+    <button class="btn-secondary" id="retakeBtn">Revise answers / Retake lesson</button>
+    <div id="reviewWrap"></div>
+
+    <h2>4. Official Score Submission</h2>
+    <div class="panel">
+      Email submission is the <strong>only official completion record</strong> for this lesson. Enter your full name and class below; your results will be sent to the teacher via Web3Forms. This page will not redirect you away.
+    </div>
+    <form id="officialForm" class="card">
+      <label class="field">Full name
+        <input type="text" id="studentName" name="studentName" required>
+      </label>
+      <label class="field">Class
+        <input type="text" id="studentClass" name="studentClass" required>
+      </label>
+      <button class="btn-primary" type="submit" id="officialSubmitBtn">Submit Official Result</button>
+      <div class="error-msg" id="submitError" role="alert"></div>
+      <div class="form-msg" id="submitProgress" role="status"></div>
+      <div class="flash-lock hidden" id="sessionNote">Submission confirmed in this browser session (non-official display only). The email sent via Web3Forms is the official record.</div>
+    </form>
+  </section>
+
+  <section id="flashcardsWrap">
+    <h2>5. Flashcards</h2>
+    <p class="flash-lock" id="flashLocked">Flashcards unlock automatically after a successful official submission above.</p>
+    <div id="flashSection" class="hidden">
+      <div class="progress" id="flashProgress">Card 1 of 37</div>
+      <div class="flashcard" id="flashCard" tabindex="0" role="button" aria-label="Flashcard, press Enter or Space to flip"></div>
+      <div class="flash-controls">
+        <button class="btn-secondary" id="flashPrevBtn">&larr; Previous</button>
+        <button class="btn-secondary" id="flashShuffleBtn">Shuffle</button>
+        <button class="btn-secondary" id="flashResetBtn">Reset</button>
+        <button class="btn-secondary" id="flashNextBtn">Next &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="note">
+    Keeping flashcards unlocked for this browser session is a convenience only. The Web3Forms email submission above is the sole official record that this lesson was completed.
+  </footer>
+</div>
+<script>
+const WEB3FORMS_ACCESS_KEY = "5d931409-e955-472f-818b-233d9b482321";
+const DATA = {"id": "CAM 12 - TEST 2", "title": "The Risks Agriculture Faces in Developing Countries", "topic": "History • Archaeology", "vocab": [[1, "entrench", "v", "/ɪnˈtrentʃ/", "khắc sâu, găm chặt (vào tâm trí/văn hóa)", "establish, embed, root"], [2, "smallholder", "n", "/ˈsmɔːlhoʊldər/", "hộ nông dân nhỏ, tiểu nông", "small farmer, peasant"], [3, "volatility", "n", "/ˌvɒləˈtɪləti/", "sự biến động, tính không ổn định", "fluctuation, instability"], [4, "prevalent", "adj", "/ˈprevələnt/", "phổ biến, lan rộng", "widespread, dominant, common"], [5, "underlying", "adj", "/ˌʌndərˈlaɪɪŋ/", "cơ bản, nằm bên dưới (nguyên nhân)", "fundamental, core, basic"], [6, "mitigate", "v", "/ˈmɪtɪɡeɪt/", "giảm nhẹ, làm dịu bớt", "reduce, lessen, alleviate"], [7, "procurement", "n", "/prəˈkjʊəmənt/", "sự thu mua, cung ứng (của chính phủ/tổ chức)", "acquisition, purchasing"], [8, "alleviate", "v", "/əˈliːvieɪt/", "giảm bớt, xoa dịu (khó khăn/đau đớn)", "ease, relieve, lessen"], [9, "stranglehold", "n", "/ˈstræŋɡlhəʊld/", "sự thắt chặt, sự kiểm soát ngạt thở", "monopoly, grip, control"], [10, "financialise", "v", "/faɪˈnænʃəlaɪz/", "tài chính hóa (chuyển thành công cụ đầu tư)", "commercialize, monetize"], [11, "magnitude", "n", "/ˈmæɡnɪtjuːd/", "tầm quan trọng, quy mô, độ lớn", "scale, size, extent"], [12, "resilience", "n", "/rɪˈzɪliəns/", "khả năng chống chịu, sự kiên cường", "adaptability, toughness"], [13, "peasant", "n", "/ˈpeznt/", "nông dân nghèo, nông dân sản xuất nhỏ", "smallholder, rustic"], [14, "autonomous", "adj", "/ɔːˈtɒnəməs/", "tự chủ, độc lập", "independent, self-governing"], [15, "synchronise", "v", "/ˈsɪŋkrənaɪz/", "đồng bộ hóa, phối hợp nhịp nhàng", "align, match, coordinate"], [16, "bargaining", "n", "/ˈbɑːɡənɪŋ/", "sự thương lượng, mặc cả", "negotiation, haggling"], [17, "stakeholder", "n", "/ˈsteɪkhəʊldər/", "bên liên quan, các bên hữu quan", "party, partner, participant"], [18, "intermediary", "n", "/ˌɪntəˈmiːdiəri/", "người trung gian, cò mồi", "broker, middleman"], [19, "subscription", "n", "/səbˈskrɪpʃn/", "sự đăng ký trả phí định kỳ, sự góp vốn", "membership, pledge"], [20, "vulnerable", "adj", "/ˈvʌlnərəbl/", "dễ bị tổn thương, yếu thế", "exposed, susceptible, weak"], [21, "intervention", "n", "/ˌɪntəˈvenʃn/", "sự can thiệp", "involvement, mediation"], [22, "subsidy", "n", "/ˈsʌbsədi/", "tiền trợ cấp, sự trợ giá", "allowance, financial grant"], [23, "commodity", "n", "/kəˈmɒdəti/", "hàng hóa, thương phẩm", "product, goods, merchandise"], [24, "dictate", "v", "/dɪkˈteɪt/", "áp đặt, phán quyết", "impose, order, prescribe"], [25, "counter-intuitive", "adj", "/ˌkaʊntərɪnˈtjuːɪtɪv/", "phản trực giác, trái ngược với suy đoán", "unexpected, paradoxical"]], "colloc": [[1, "price volatility", "sự biến động giá cả"], [2, "social safety net", "mạng lưới an sinh xã hội"], [3, "state intervention", "sự can thiệp của nhà nước"], [4, "food security", "an ninh lương thực"], [5, "extreme weather", "thời tiết cực đoan"], [6, "collective action", "hành động tập thể"], [7, "bargaining power", "năng lực thương lượng / mặc cả"], [8, "direct food distribution", "hệ thống phân phối thực phẩm trực tiếp"], [9, "high-input agriculture", "nông nghiệp đầu tư chi phí/vật tư cao"], [10, "agricultural shock", "cú sốc nông nghiệp"], [11, "commodity futures market", "thị trường hàng hóa tương lai"], [12, "smallholder farmer", "hộ tiểu nông / nông dân nhỏ"]], "questions": [{"stem": "Unpredictable natural disasters and sudden shifts in global supply often trigger extreme __________.", "options": ["rice volatility", "social safety nets", "bargaining power", "direct food distribution"], "correctIdx": 0, "explanation": "Thiên tai bất ngờ và biến động cung toàn cầu gây ra 'price volatility' (sự biến động giá) - đáp án đúng nói về biến động giá dù văn bản ghi 'rice volatility' do lỗi đánh máy trong đề gốc.", "ghinho": "'volatility' = sự biến động; liên kết với 'price' để chỉ giá cả lên xuống thất thường."}, {"stem": "Government welfare policies serve as a crucial __________ to protect rural households during crop failures.", "options": ["high-input agriculture", "social safety net", "commodity futures market", "agricultural shock"], "correctIdx": 1, "explanation": "'Social safety net' (mạng lưới an sinh xã hội) là chính sách phúc lợi bảo vệ hộ dân nông thôn khi mất mùa.", "ghinho": "'safety net' = lưới an toàn; nghĩ đến phúc lợi xã hội bảo vệ người dân."}, {"stem": "Many essayists argued that strong __________ is required to build roads and storage facilities in rural regions.", "options": ["collective action", "price volatility", "state intervention", "direct food distribution"], "correctIdx": 2, "explanation": "Xây đường và kho chứa cần 'state intervention' (sự can thiệp của nhà nước) vì đây là hạ tầng công.", "ghinho": "'intervention' = can thiệp; nhà nước can thiệp để xây hạ tầng công cộng."}, {"stem": "Forming local cooperatives helps small producers significantly improve their economic __________.", "options": ["agricultural shocks", "high-input agriculture", "social safety nets", "bargaining power"], "correctIdx": 3, "explanation": "Hợp tác xã giúp nông dân nhỏ tăng 'bargaining power' (năng lực thương lượng) khi giao dịch.", "ghinho": "'bargaining' = thương lượng/mặc cả; hợp tác xã tăng sức mạnh đàm phán."}, {"stem": "Long droughts and unexpected flash floods are clear examples of __________ threatening crop yields.", "options": ["extreme weather", "commodity futures markets", "direct food distribution", "state intervention"], "correctIdx": 0, "explanation": "Hạn hán và lũ lụt là ví dụ của 'extreme weather' (thời tiết cực đoan).", "ghinho": "hạn hán + lũ lụt = biểu hiện của thời tiết cực đoan, không liên quan tới thị trường hay phân phối."}, {"stem": "Without proper government intervention, vulnerable communities face persistent threats to their national __________.", "options": ["bargaining power", "food security", "high-input agriculture", "price volatility"], "correctIdx": 1, "explanation": "Thiếu can thiệp của chính phủ đe dọa 'food security' (an ninh lương thực) quốc gia.", "ghinho": "'food security' = an ninh lương thực; liên quan tới đủ ăn cho cả nước."}, {"stem": "Farmers trading directly with buyers on the __________ can lock in prices to hedge against financial loss.", "options": ["social safety net", "extreme weather", "commodity futures market", "direct food distribution"], "correctIdx": 2, "explanation": "'Commodity futures market' (thị trường hàng hóa tương lai) cho phép nông dân chốt giá trước để tránh rủi ro tài chính.", "ghinho": "'futures market' = thị trường giao dịch tương lai, dùng để 'lock in prices' (chốt giá)."}, {"stem": "Relying on synthetic fertilizers and machinery defines modern __________, which often raises production costs.", "options": ["high-input agriculture", "agricultural shock", "bargaining power", "state intervention"], "correctIdx": 0, "explanation": "Dùng nhiều phân bón hóa học và máy móc là đặc trưng của 'high-input agriculture' (nông nghiệp đầu tư chi phí cao).", "ghinho": "'high-input' = đầu vào cao (phân bón, máy móc) làm tăng chi phí sản xuất."}, {"stem": "Eliminating middleman markups is best achieved through a well-organized __________ system.", "options": ["extreme weather", "price volatility", "direct food distribution", "social safety net"], "correctIdx": 2, "explanation": "Loại bỏ khoản chênh lệch của trung gian cần một hệ thống 'direct food distribution' (phân phối thực phẩm trực tiếp).", "ghinho": "'direct' = trực tiếp, bỏ qua trung gian (middleman)."}, {"stem": "Rural producers who engage in __________ can pool resources to transport goods more cheaply.", "options": ["collective action", "commodity futures market", "high-input agriculture", "agricultural shock"], "correctIdx": 0, "explanation": "Người sản xuất nông thôn cùng góp nguồn lực qua 'collective action' (hành động tập thể) để giảm chi phí vận chuyển.", "ghinho": "'collective' = tập thể, cùng chung sức để đạt hiệu quả kinh tế."}, {"stem": "Building storage facilities helps __________ the devastating effects of unexpected market crashes.", "options": ["dictating", "mitigate", "synchronise", "entrench"], "correctIdx": 1, "explanation": "Xây kho chứa giúp 'mitigate' (giảm nhẹ) tác động tiêu cực của biến động thị trường.", "ghinho": "'mitigate' = giảm nhẹ tác hại, gần nghĩa với 'alleviate', 'reduce'."}, {"stem": "Powerful corporate traders often hold a tight __________ over market prices, squeezing poor producers.", "options": ["smallholder", "magnitude", "stranglehold", "resilience"], "correctIdx": 2, "explanation": "Các nhà buôn lớn giữ 'stranglehold' (sự kiểm soát ngạt thở) đối với giá thị trường, ép nông dân nghèo.", "ghinho": "'stranglehold' = kiểm soát chặt như bóp nghẹt, khác 'resilience' (khả năng chống chịu)."}, {"stem": "Developing crop varieties with higher genetic __________ enables plants to survive prolonged droughts.", "options": ["resilience", "subscription", "magnitude", "volatility"], "correctIdx": 0, "explanation": "Giống cây có 'resilience' (khả năng chống chịu) di truyền cao sẽ sống được qua hạn hán kéo dài.", "ghinho": "'resilience' = khả năng phục hồi/chống chịu, thường đi với 'genetic' hoặc 'climate'."}, {"stem": "Aggressive local middlemen frequently attempt to __________ harvest purchasing prices to desperate farmers.", "options": ["alleviate", "entrench", "mitigate", "dictate"], "correctIdx": 3, "explanation": "Trung gian hung hăng thường 'dictate' (áp đặt) giá thu mua cho nông dân khốn khó.", "ghinho": "'dictate' = áp đặt/ra lệnh, khác với 'alleviate'/'mitigate' (giảm nhẹ)."}, {"stem": "It seems completely __________ that those who produce food are often the ones suffering from severe hunger.", "options": ["autonomous", "prevalent", "vulnerable", "counter-intuitive"], "correctIdx": 3, "explanation": "Việc người sản xuất lương thực lại chịu đói là điều 'counter-intuitive' (phản trực giác, trái ngược với logic thông thường).", "ghinho": "'counter-intuitive' = ngược với những gì ta nghĩ là hợp lý."}, {"stem": "The word mitigate is closest in meaning to:", "options": ["reduce", "increase", "create", "ignore"], "correctIdx": 0, "explanation": "'Mitigate' nghĩa là giảm nhẹ, đồng nghĩa với 'reduce'.", "ghinho": "mitigate = reduce/lessen, không phải increase (tăng)."}, {"stem": "The word prevalent is closest in meaning to:", "options": ["rare", "widespread", "temporary", "hidden"], "correctIdx": 1, "explanation": "'Prevalent' nghĩa là phổ biến, lan rộng, đồng nghĩa 'widespread'.", "ghinho": "prevalent = widespread/common, trái nghĩa với 'rare'."}, {"stem": "The word alleviate is closest in meaning to:", "options": ["worsen", "observe", "maintain", "ease"], "correctIdx": 3, "explanation": "'Alleviate' nghĩa là giảm bớt, xoa dịu, đồng nghĩa 'ease'.", "ghinho": "alleviate = ease/relieve, trái nghĩa với 'worsen' (làm tệ hơn)."}, {"stem": "The word autonomous is closest in meaning to:", "options": ["dependent", "restricted", "independent", "corporate"], "correctIdx": 2, "explanation": "'Autonomous' nghĩa là tự chủ, độc lập, đồng nghĩa 'independent'.", "ghinho": "autonomous = independent/self-governing, trái nghĩa 'dependent'."}, {"stem": "The word magnitude is closest in meaning to:", "options": ["scale", "speed", "cause", "solution"], "correctIdx": 0, "explanation": "'Magnitude' nghĩa là quy mô, độ lớn, đồng nghĩa 'scale'.", "ghinho": "magnitude = scale/size/extent, không liên quan đến tốc độ."}], "flashcards": [{"front": "entrench", "pos": "v", "ipa": "/ɪnˈtrentʃ/", "meaning": "khắc sâu, găm chặt (vào tâm trí/văn hóa)", "syn": "establish, embed, root", "sentence": "Usage note: \"entrench\" (v) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "smallholder", "pos": "n", "ipa": "/ˈsmɔːlhoʊldər/", "meaning": "hộ nông dân nhỏ, tiểu nông", "syn": "small farmer, peasant", "sentence": "Usage note: \"smallholder\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "volatility", "pos": "n", "ipa": "/ˌvɒləˈtɪləti/", "meaning": "sự biến động, tính không ổn định", "syn": "fluctuation, instability", "sentence": "Usage note: \"volatility\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "prevalent", "pos": "adj", "ipa": "/ˈprevələnt/", "meaning": "phổ biến, lan rộng", "syn": "widespread, dominant, common", "sentence": "Usage note: \"prevalent\" (adj) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "underlying", "pos": "adj", "ipa": "/ˌʌndərˈlaɪɪŋ/", "meaning": "cơ bản, nằm bên dưới (nguyên nhân)", "syn": "fundamental, core, basic", "sentence": "Usage note: \"underlying\" (adj) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "mitigate", "pos": "v", "ipa": "/ˈmɪtɪɡeɪt/", "meaning": "giảm nhẹ, làm dịu bớt", "syn": "reduce, lessen, alleviate", "sentence": "Usage note: \"mitigate\" (v) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "procurement", "pos": "n", "ipa": "/prəˈkjʊəmənt/", "meaning": "sự thu mua, cung ứng (của chính phủ/tổ chức)", "syn": "acquisition, purchasing", "sentence": "Usage note: \"procurement\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "alleviate", "pos": "v", "ipa": "/əˈliːvieɪt/", "meaning": "giảm bớt, xoa dịu (khó khăn/đau đớn)", "syn": "ease, relieve, lessen", "sentence": "Usage note: \"alleviate\" (v) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "stranglehold", "pos": "n", "ipa": "/ˈstræŋɡlhəʊld/", "meaning": "sự thắt chặt, sự kiểm soát ngạt thở", "syn": "monopoly, grip, control", "sentence": "Usage note: \"stranglehold\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "financialise", "pos": "v", "ipa": "/faɪˈnænʃəlaɪz/", "meaning": "tài chính hóa (chuyển thành công cụ đầu tư)", "syn": "commercialize, monetize", "sentence": "Usage note: \"financialise\" (v) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "magnitude", "pos": "n", "ipa": "/ˈmæɡnɪtjuːd/", "meaning": "tầm quan trọng, quy mô, độ lớn", "syn": "scale, size, extent", "sentence": "Usage note: \"magnitude\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "resilience", "pos": "n", "ipa": "/rɪˈzɪliəns/", "meaning": "khả năng chống chịu, sự kiên cường", "syn": "adaptability, toughness", "sentence": "Usage note: \"resilience\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "peasant", "pos": "n", "ipa": "/ˈpeznt/", "meaning": "nông dân nghèo, nông dân sản xuất nhỏ", "syn": "smallholder, rustic", "sentence": "Usage note: \"peasant\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "autonomous", "pos": "adj", "ipa": "/ɔːˈtɒnəməs/", "meaning": "tự chủ, độc lập", "syn": "independent, self-governing", "sentence": "Usage note: \"autonomous\" (adj) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "synchronise", "pos": "v", "ipa": "/ˈsɪŋkrənaɪz/", "meaning": "đồng bộ hóa, phối hợp nhịp nhàng", "syn": "align, match, coordinate", "sentence": "Usage note: \"synchronise\" (v) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "bargaining", "pos": "n", "ipa": "/ˈbɑːɡənɪŋ/", "meaning": "sự thương lượng, mặc cả", "syn": "negotiation, haggling", "sentence": "Usage note: \"bargaining\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "stakeholder", "pos": "n", "ipa": "/ˈsteɪkhəʊldər/", "meaning": "bên liên quan, các bên hữu quan", "syn": "party, partner, participant", "sentence": "Usage note: \"stakeholder\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "intermediary", "pos": "n", "ipa": "/ˌɪntəˈmiːdiəri/", "meaning": "người trung gian, cò mồi", "syn": "broker, middleman", "sentence": "Usage note: \"intermediary\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "subscription", "pos": "n", "ipa": "/səbˈskrɪpʃn/", "meaning": "sự đăng ký trả phí định kỳ, sự góp vốn", "syn": "membership, pledge", "sentence": "Usage note: \"subscription\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "vulnerable", "pos": "adj", "ipa": "/ˈvʌlnərəbl/", "meaning": "dễ bị tổn thương, yếu thế", "syn": "exposed, susceptible, weak", "sentence": "Usage note: \"vulnerable\" (adj) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "intervention", "pos": "n", "ipa": "/ˌɪntəˈvenʃn/", "meaning": "sự can thiệp", "syn": "involvement, mediation", "sentence": "Usage note: \"intervention\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "subsidy", "pos": "n", "ipa": "/ˈsʌbsədi/", "meaning": "tiền trợ cấp, sự trợ giá", "syn": "allowance, financial grant", "sentence": "Usage note: \"subsidy\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "commodity", "pos": "n", "ipa": "/kəˈmɒdəti/", "meaning": "hàng hóa, thương phẩm", "syn": "product, goods, merchandise", "sentence": "Usage note: \"commodity\" (n) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "dictate", "pos": "v", "ipa": "/dɪkˈteɪt/", "meaning": "áp đặt, phán quyết", "syn": "impose, order, prescribe", "sentence": "Usage note: \"dictate\" (v) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "counter-intuitive", "pos": "adj", "ipa": "/ˌkaʊntərɪnˈtjuːɪtɪv/", "meaning": "phản trực giác, trái ngược với suy đoán", "syn": "unexpected, paradoxical", "sentence": "Usage note: \"counter-intuitive\" (adj) appears in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "price volatility", "pos": "collocation", "ipa": "", "meaning": "sự biến động giá cả", "syn": "", "sentence": "Usage note: the collocation \"price volatility\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "social safety net", "pos": "collocation", "ipa": "", "meaning": "mạng lưới an sinh xã hội", "syn": "", "sentence": "Usage note: the collocation \"social safety net\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "state intervention", "pos": "collocation", "ipa": "", "meaning": "sự can thiệp của nhà nước", "syn": "", "sentence": "Usage note: the collocation \"state intervention\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "food security", "pos": "collocation", "ipa": "", "meaning": "an ninh lương thực", "syn": "", "sentence": "Usage note: the collocation \"food security\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "extreme weather", "pos": "collocation", "ipa": "", "meaning": "thời tiết cực đoan", "syn": "", "sentence": "Usage note: the collocation \"extreme weather\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "collective action", "pos": "collocation", "ipa": "", "meaning": "hành động tập thể", "syn": "", "sentence": "Usage note: the collocation \"collective action\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "bargaining power", "pos": "collocation", "ipa": "", "meaning": "năng lực thương lượng / mặc cả", "syn": "", "sentence": "Usage note: the collocation \"bargaining power\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "direct food distribution", "pos": "collocation", "ipa": "", "meaning": "hệ thống phân phối thực phẩm trực tiếp", "syn": "", "sentence": "Usage note: the collocation \"direct food distribution\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "high-input agriculture", "pos": "collocation", "ipa": "", "meaning": "nông nghiệp đầu tư chi phí/vật tư cao", "syn": "", "sentence": "Usage note: the collocation \"high-input agriculture\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "agricultural shock", "pos": "collocation", "ipa": "", "meaning": "cú sốc nông nghiệp", "syn": "", "sentence": "Usage note: the collocation \"agricultural shock\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "commodity futures market", "pos": "collocation", "ipa": "", "meaning": "thị trường hàng hóa tương lai", "syn": "", "sentence": "Usage note: the collocation \"commodity futures market\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}, {"front": "smallholder farmer", "pos": "collocation", "ipa": "", "meaning": "hộ tiểu nông / nông dân nhỏ", "syn": "", "sentence": "Usage note: the collocation \"smallholder farmer\" is used in the passage \"The Risks Agriculture Faces in Developing Countries\"."}]};
+
+let currentQ = 0;
+let answers = new Array(DATA.questions.length).fill(null);
+let officialSubmitted = false;
+let lastResultPayload = null;
+
+function id(x){ return document.getElementById(x); }
+
+function initVocab(){
+  const tbody = id("vocabBody");
+  DATA.vocab.forEach(v=>{
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${v[0]}</td><td>${v[1]}</td><td>${v[2]}</td><td>${v[3]}</td><td>${v[4]}</td><td>${v[5]}</td>`;
+    tbody.appendChild(tr);
+  });
+  const ctbody = id("collocBody");
+  DATA.colloc.forEach(c=>{
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${c[0]}</td><td>${c[1]}</td><td>${c[2]}</td>`;
+    ctbody.appendChild(tr);
+  });
+  id("vocabSearch").addEventListener("input", filterVocab);
+}
+
+function filterVocab(){
+  const q = id("vocabSearch").value.toLowerCase();
+  document.querySelectorAll("#vocabBody tr").forEach(tr=>{ tr.style.display = tr.textContent.toLowerCase().includes(q) ? "" : "none"; });
+  document.querySelectorAll("#collocBody tr").forEach(tr=>{ tr.style.display = tr.textContent.toLowerCase().includes(q) ? "" : "none"; });
+}
+
+function startPractice(){
+  id("vocabSection").classList.add("hidden");
+  id("quizSection").classList.remove("hidden");
+  renderQuestion();
+  id("quizSection").scrollIntoView({behavior:"smooth"});
+}
+
+function renderQuestion(){
+  const q = DATA.questions[currentQ];
+  id("qProgress").textContent = `Question ${currentQ+1} of ${DATA.questions.length}`;
+  id("qStem").textContent = q.stem;
+  const optWrap = id("qOptions");
+  optWrap.innerHTML = "";
+  const letters = ["A","B","C","D"];
+  q.options.forEach((opt,i)=>{
+    const label = document.createElement("label");
+    label.innerHTML = `<input type="radio" name="opt" value="${i}" ${answers[currentQ]===i?"checked":""}> ${letters[i]}. ${opt}`;
+    label.querySelector("input").addEventListener("change", ()=>{ answers[currentQ]=i; });
+    optWrap.appendChild(label);
+  });
+  id("prevBtn").disabled = currentQ===0;
+  id("nextBtn").classList.toggle("hidden", currentQ>=DATA.questions.length-1);
+  id("submitQuizBtn").classList.toggle("hidden", currentQ!==DATA.questions.length-1);
+  id("quizError").textContent = "";
+}
+
+function goPrev(){ if(currentQ>0){ currentQ--; renderQuestion(); } }
+function goNext(){ if(currentQ<DATA.questions.length-1){ currentQ++; renderQuestion(); } }
+
+function submitQuiz(){
+  const unanswered = [];
+  answers.forEach((a,i)=>{ if(a===null) unanswered.push(i+1); });
+  if(unanswered.length>0){
+    currentQ = unanswered[0]-1;
+    renderQuestion();
+    id("quizError").textContent = `Please answer all questions before submitting. Unanswered: Question ${unanswered.join(", ")}.`;
+    return;
+  }
+  showResults();
+}
+
+function showResults(){
+  id("quizSection").classList.add("hidden");
+  id("resultsSection").classList.remove("hidden");
+  let correctCount = 0;
+  const letters = ["A","B","C","D"];
+  const reviewWrap = id("reviewWrap");
+  reviewWrap.innerHTML = "";
+  DATA.questions.forEach((q,i)=>{
+    const isCorrect = answers[i]===q.correctIdx;
+    if(isCorrect) correctCount++;
+    const div = document.createElement("div");
+    div.className = `qcard review-card ${isCorrect?"correct":"incorrect"}`;
+    let html = `<div class="qstem">Question ${i+1}: ${q.stem}</div>
+      <div>Your answer: <strong>${letters[answers[i]]}. ${q.options[answers[i]]}</strong> <span class="result-badge ${isCorrect?"badge-correct":"badge-incorrect"}">${isCorrect?"Correct":"Incorrect"}</span></div>`;
+    if(!isCorrect){
+      html += `<div>Correct answer: <strong>${letters[q.correctIdx]}. ${q.options[q.correctIdx]}</strong></div>
+      <div class="explain">${q.explanation}<div class="ghinho">${q.ghinho}</div></div>`;
+    }
+    div.innerHTML = html;
+    reviewWrap.appendChild(div);
+  });
+  const total = DATA.questions.length;
+  const pct = Math.round((correctCount/total)*1000)/10;
+  id("scoreText").textContent = `${correctCount} / ${total} correct`;
+  id("scorePct").textContent = `${pct}%`;
+  lastResultPayload = { correctCount, total, pct, answers: answers.slice() };
+  id("resultsSection").scrollIntoView({behavior:"smooth"});
+}
+
+function retakeQuiz(){
+  currentQ = 0;
+  answers = new Array(DATA.questions.length).fill(null);
+  id("resultsSection").classList.add("hidden");
+  id("quizSection").classList.remove("hidden");
+  renderQuestion();
+}
+
+function buildReviewSummary(){
+  const letters = ["A","B","C","D"];
+  return DATA.questions.map((q,i)=>{
+    const isCorrect = answers[i]===q.correctIdx;
+    return `Q${i+1}: selected=${letters[answers[i]]} (${q.options[answers[i]]}) correct=${letters[q.correctIdx]} (${q.options[q.correctIdx]}) ${isCorrect?"CORRECT":"INCORRECT"}`;
+  }).join("\n");
+}
+
+function buildCorrectionsSummary(){
+  const lines = [];
+  DATA.questions.forEach((q,i)=>{
+    if(answers[i]!==q.correctIdx) lines.push(`Q${i+1}: ${q.explanation} ${q.ghinho}`);
+  });
+  return lines.length ? lines.join("\n\n") : "No incorrect answers.";
+}
+
+async function submitOfficial(e){
+  e.preventDefault();
+  const name = id("studentName").value.trim();
+  const cls = id("studentClass").value.trim();
+  const errEl = id("submitError");
+  errEl.textContent = "";
+  if(!name || !cls){ errEl.textContent = "Full name and class are both required."; return; }
+  const btn = id("officialSubmitBtn");
+  btn.disabled = true;
+  id("submitProgress").textContent = "Submitting your official result, please wait...";
+  id("submitProgress").className = "form-msg";
+  const now = new Date();
+  const timestamp = now.toLocaleString();
+  const letters = ["A","B","C","D"];
+  const selectedList = answers.map((a,i)=>`Q${i+1}:${letters[a]}`).join(", ");
+  const correctList = DATA.questions.map((q,i)=>`Q${i+1}:${letters[q.correctIdx]}`).join(", ");
+  const formData = new FormData();
+  formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+  formData.append("subject", `CAM R1 Vocab Submission | ${DATA.id} - ${DATA.title} | ${name}`);
+  formData.append("from_name", "CAM R1 Vocab - Animals");
+  formData.append("Student Full Name", name);
+  formData.append("Class", cls);
+  formData.append("Lesson Identifier", DATA.id);
+  formData.append("Lesson Title", DATA.title);
+  formData.append("Topic", DATA.topic);
+  formData.append("Score", `${lastResultPayload.correctCount}/${lastResultPayload.total}`);
+  formData.append("Percentage", `${lastResultPayload.pct}%`);
+  formData.append("Submission Timestamp (local)", timestamp);
+  formData.append("All Selected Answers", selectedList);
+  formData.append("All Correct Answers", correctList);
+  formData.append("Answer Review Summary", buildReviewSummary());
+  formData.append("Corrections Summary", buildCorrectionsSummary());
+  try{
+    const res = await fetch("https://api.web3forms.com/submit", { method:"POST", body: formData });
+    const data = await res.json();
+    if(data.success){
+      officialSubmitted = true;
+      id("submitProgress").textContent = `Officially submitted. ${name}, your result for ${DATA.title} (${lastResultPayload.correctCount}/${lastResultPayload.total}) was sent at ${timestamp}.`;
+      id("submitProgress").className = "form-msg ok";
+      id("sessionNote").classList.remove("hidden");
+      unlockFlashcards();
+    } else { throw new Error(data.message || "Unknown error"); }
+  } catch(err){
+    id("submitProgress").textContent = "Submission failed. Your results are preserved - please check your connection and try again.";
+    id("submitProgress").className = "form-msg err";
+  } finally { btn.disabled = false; }
+}
+
+let flashIndex = 0;
+let flashOrder = [];
+let flashFlipped = false;
+
+function unlockFlashcards(){
+  id("flashLocked").classList.add("hidden");
+  id("flashSection").classList.remove("hidden");
+  flashOrder = DATA.flashcards.map((_,i)=>i);
+  flashIndex = 0;
+  renderFlash();
+}
+
+function renderFlash(){
+  flashFlipped = false;
+  const card = DATA.flashcards[flashOrder[flashIndex]];
+  id("flashProgress").textContent = `Card ${flashIndex+1} of ${flashOrder.length}`;
+  id("flashCard").innerHTML = `<div>${card.front}</div>`;
+  id("flashCard").setAttribute("aria-label", `Flashcard front: ${card.front}. Press Enter or Space to flip.`);
+}
+
+function flipFlash(){
+  const card = DATA.flashcards[flashOrder[flashIndex]];
+  flashFlipped = !flashFlipped;
+  if(flashFlipped){
+    id("flashCard").innerHTML = `<div class="flash-back">
+      ${card.pos?`<div><strong>Part of speech:</strong> ${card.pos}</div>`:""}
+      ${card.ipa?`<div><strong>IPA:</strong> ${card.ipa}</div>`:""}
+      <div><strong>Meaning:</strong> ${card.meaning}</div>
+      ${card.syn?`<div><strong>Synonyms:</strong> ${card.syn}</div>`:""}
+      <div><strong>Note:</strong> ${card.sentence}</div>
+    </div>`;
+  } else { id("flashCard").innerHTML = `<div>${card.front}</div>`; }
+}
+
+function flashNext(){ flashIndex = (flashIndex+1)%flashOrder.length; renderFlash(); }
+function flashPrev(){ flashIndex = (flashIndex-1+flashOrder.length)%flashOrder.length; renderFlash(); }
+function flashShuffle(){
+  for(let i=flashOrder.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [flashOrder[i],flashOrder[j]]=[flashOrder[j],flashOrder[i]]; }
+  flashIndex=0; renderFlash();
+}
+function flashReset(){ flashOrder = DATA.flashcards.map((_,i)=>i); flashIndex=0; renderFlash(); }
+
+document.addEventListener("DOMContentLoaded", initVocab);
+id("startPracticeBtn").addEventListener("click", startPractice);
+id("prevBtn").addEventListener("click", goPrev);
+id("nextBtn").addEventListener("click", goNext);
+id("submitQuizBtn").addEventListener("click", submitQuiz);
+id("retakeBtn").addEventListener("click", retakeQuiz);
+id("officialForm").addEventListener("submit", submitOfficial);
+id("flashCard").addEventListener("click", flipFlash);
+id("flashCard").addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); flipFlash(); } });
+id("flashNextBtn").addEventListener("click", flashNext);
+id("flashPrevBtn").addEventListener("click", flashPrev);
+id("flashShuffleBtn").addEventListener("click", flashShuffle);
+id("flashResetBtn").addEventListener("click", flashReset);
+</script>
+</body>
+</html>

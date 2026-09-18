@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAM 15 - TEST 4 - The Return of the Huarango | CAM R1 Vocab</title>
+<style>:root{--bg:#f7f6f2;--navy:#12233f;--navy2:#1c3358;--blue:#2f5fa8;--blue-light:#e7edf7;--border:#d8dde5;--text:#26313f;--muted:#5b6675;--danger:#a3312a;--good:#1f7a4d;--bad:#a3312a;--focus:#1857a4}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+.wrap{max-width:960px;margin:0 auto;padding:24px 20px 64px}
+header.top{background:var(--navy);color:#fff;padding:22px 20px}
+header.top .inner{max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+header.top h1{font-size:1.35rem;margin:0;font-weight:700}
+header.top p{margin:4px 0 0;color:#c9d4e6;font-size:.92rem}
+a.backlink,button.backlink{display:inline-block;background:transparent;border:1px solid #7f93b4;color:#fff;padding:8px 14px;border-radius:6px;text-decoration:none;font-size:.88rem}
+a.backlink:hover,button.backlink:hover{background:#22406e}
+h2{color:var(--navy);font-size:1.18rem;border-bottom:2px solid var(--blue-light);padding-bottom:8px;margin-top:34px}
+h3{color:var(--navy2);font-size:1.02rem}
+.card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:16px 0}
+.panel{background:var(--blue-light);border:1px solid #c7d5ec;border-radius:10px;padding:16px 18px;margin:16px 0;font-size:.94rem}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:10px}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--navy);color:#fff;font-weight:600;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+input[type=search],input[type=text]{padding:9px 12px;border:1px solid var(--border);border-radius:6px;width:100%;font-size:.95rem}
+input[type=search]:focus,input[type=text]:focus,button:focus,a:focus,input[type=radio]:focus{outline:3px solid var(--focus);outline-offset:2px}
+button{cursor:pointer;font-size:.95rem;font-family:inherit}
+.btn-primary{background:var(--blue);color:#fff;border:none;padding:11px 22px;border-radius:6px;font-weight:600}
+.btn-primary:hover{background:var(--navy2)}
+.btn-primary:disabled{background:#93a4bd;cursor:not-allowed}
+.btn-secondary{background:#fff;color:var(--blue);border:1px solid var(--blue);padding:10px 20px;border-radius:6px;font-weight:600}
+.btn-secondary:hover{background:var(--blue-light)}
+.btn-secondary:disabled{color:#9aa6b5;border-color:#c7cdd6;cursor:not-allowed}
+.hidden{display:none!important}
+.qcard{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:14px 0}
+.qcard.unanswered{border-color:var(--danger)}
+.qstem{font-weight:600;margin-bottom:12px}
+.options label{display:block;background:#fafbfc;border:1px solid var(--border);border-radius:6px;padding:9px 12px;margin:6px 0;cursor:pointer}
+.options label:hover{border-color:var(--blue)}
+.options input{margin-right:9px}
+.progress{color:var(--muted);font-size:.9rem;margin-bottom:6px}
+.nav-row{display:flex;justify-content:space-between;gap:10px;margin-top:16px;flex-wrap:wrap}
+.error-msg{color:var(--danger);font-weight:600;font-size:.88rem;margin-top:6px}
+.result-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-weight:700;font-size:.82rem}
+.badge-correct{background:#e2f3e9;color:var(--good)}
+.badge-incorrect{background:#f8e7e5;color:var(--bad)}
+.review-card{border-left:4px solid var(--border)}
+.review-card.correct{border-left-color:var(--good)}
+.review-card.incorrect{border-left-color:var(--bad)}
+.explain{background:#fdf6ee;border:1px solid #eadfc9;border-radius:6px;padding:10px 12px;margin-top:10px;font-size:.9rem}
+.ghinho{font-weight:600;color:var(--navy2);margin-top:6px}
+.score-banner{background:var(--navy);color:#fff;border-radius:10px;padding:20px;text-align:center;margin:20px 0}
+.score-banner .big{font-size:2.1rem;font-weight:800}
+label.field{display:block;margin:12px 0;font-weight:600;font-size:.9rem}
+label.field input{display:block;margin-top:6px;font-weight:400;width:100%;max-width:420px}
+.form-msg{margin-top:12px;font-weight:600}
+.form-msg.ok{color:var(--good)}
+.form-msg.err{color:var(--bad)}
+.flash-lock{color:var(--muted);font-style:italic}
+.flashcard{background:#fff;border:1px solid var(--border);border-radius:12px;min-height:220px;display:flex;align-items:center;justify-content:center;text-align:center;padding:26px;cursor:pointer;font-size:1.1rem;margin:16px 0}
+.flashcard:focus{outline:3px solid var(--focus)}
+.flash-back{font-size:.92rem;text-align:left}
+.flash-back div{margin:4px 0}
+.flash-controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+footer.note{color:var(--muted);font-size:.85rem;margin-top:40px;border-top:1px solid var(--border);padding-top:14px}
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+@media (max-width:600px){table,thead,tbody,th,td,tr{font-size:.82rem}th,td{padding:6px 6px}}
+.lesson-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.lesson-card h3{margin:0;font-size:1.05rem}
+.lesson-card .meta{font-size:.85rem;color:var(--muted)}
+.lesson-card .stats{display:flex;gap:12px;font-size:.82rem;color:var(--navy2);flex-wrap:wrap}
+.start-btn{margin-top:auto;background:var(--blue);color:#fff;text-align:center;padding:10px;border-radius:6px;text-decoration:none;font-weight:700}
+.start-btn:hover{background:var(--navy2)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <div>
+      <h1>CAM 15 - TEST 4 &middot; The Return of the Huarango</h1>
+      <p>Topic: Conservation & Ecology • Native Species Restoration • Ecosystem Protection</p>
+    </div>
+    <a class="backlink" href="index.html">&larr; Back to Dashboard</a>
+  </div>
+</header>
+<div class="wrap">
+
+  <section class="panel" aria-label="Instructions">
+    <strong>How this lesson works</strong><br>
+    Review the vocabulary and collocations below, then click <em>Start Practice</em> to answer every exercise question from this lesson in its original order. After you submit the quiz you will see your score and, for every incorrect answer, a short explanation in Vietnamese. Only an official submission (name + class, sent by email via Web3Forms) counts as your completion record &mdash; simply finishing the quiz in this browser is not official. Flashcards for this lesson's vocabulary unlock automatically after a successful official submission.
+  </section>
+
+  <section id="vocabSection">
+    <h2>1. Vocabulary Review</h2>
+    <label for="vocabSearch"><strong>Search vocabulary or collocations</strong></label>
+    <input type="search" id="vocabSearch" placeholder="Type a word, meaning, or synonym...">
+    <div class="card" style="overflow-x:auto">
+      <h3>Vocabulary</h3>
+      <table>
+        <thead><tr><th>No.</th><th>Vocabulary</th><th>POS</th><th>IPA</th><th>Vietnamese Meaning</th><th>Synonyms</th></tr></thead>
+        <tbody id="vocabBody"></tbody>
+      </table>
+    </div>
+    <div class="card" style="overflow-x:auto">
+      <h3>Collocations</h3>
+      <table>
+        <thead><tr><th>No.</th><th>Collocation</th><th>Meaning</th></tr></thead>
+        <tbody id="collocBody"></tbody>
+      </table>
+    </div>
+    <button class="btn-primary" id="startPracticeBtn">Start Practice &rarr;</button>
+  </section>
+
+  <section id="quizSection" class="hidden">
+    <h2>2. Quiz</h2>
+    <div class="qcard">
+      <div class="progress" id="qProgress">Question 1 of 20</div>
+      <div class="qstem" id="qStem"></div>
+      <div class="options" id="qOptions" role="radiogroup"></div>
+      <div class="error-msg" id="quizError" role="alert"></div>
+      <div class="nav-row">
+        <button class="btn-secondary" id="prevBtn">&larr; Previous</button>
+        <div>
+          <button class="btn-secondary" id="nextBtn">Next &rarr;</button>
+          <button class="btn-primary hidden" id="submitQuizBtn">Submit Quiz</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resultsSection" class="hidden">
+    <h2>3. Results and Corrections</h2>
+    <div class="score-banner">
+      <div class="big" id="scoreText">0 / 20 correct</div>
+      <div id="scorePct">0%</div>
+    </div>
+    <button class="btn-secondary" id="retakeBtn">Revise answers / Retake lesson</button>
+    <div id="reviewWrap"></div>
+
+    <h2>4. Official Score Submission</h2>
+    <div class="panel">
+      Email submission is the <strong>only official completion record</strong> for this lesson. Enter your full name and class below; your results will be sent to the teacher via Web3Forms. This page will not redirect you away.
+    </div>
+    <form id="officialForm" class="card">
+      <label class="field">Full name
+        <input type="text" id="studentName" name="studentName" required>
+      </label>
+      <label class="field">Class
+        <input type="text" id="studentClass" name="studentClass" required>
+      </label>
+      <button class="btn-primary" type="submit" id="officialSubmitBtn">Submit Official Result</button>
+      <div class="error-msg" id="submitError" role="alert"></div>
+      <div class="form-msg" id="submitProgress" role="status"></div>
+      <div class="flash-lock hidden" id="sessionNote">Submission confirmed in this browser session (non-official display only). The email sent via Web3Forms is the official record.</div>
+    </form>
+  </section>
+
+  <section id="flashcardsWrap">
+    <h2>5. Flashcards</h2>
+    <p class="flash-lock" id="flashLocked">Flashcards unlock automatically after a successful official submission above.</p>
+    <div id="flashSection" class="hidden">
+      <div class="progress" id="flashProgress">Card 1 of 37</div>
+      <div class="flashcard" id="flashCard" tabindex="0" role="button" aria-label="Flashcard, press Enter or Space to flip"></div>
+      <div class="flash-controls">
+        <button class="btn-secondary" id="flashPrevBtn">&larr; Previous</button>
+        <button class="btn-secondary" id="flashShuffleBtn">Shuffle</button>
+        <button class="btn-secondary" id="flashResetBtn">Reset</button>
+        <button class="btn-secondary" id="flashNextBtn">Next &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="note">
+    Keeping flashcards unlocked for this browser session is a convenience only. The Web3Forms email submission above is the sole official record that this lesson was completed.
+  </footer>
+</div>
+<script>
+const WEB3FORMS_ACCESS_KEY = "5d931409-e955-472f-818b-233d9b482321";
+const DATA = {"id": "CAM 15 - TEST 4", "title": "The Return of the Huarango", "topic": "Conservation & Ecology • Native Species Restoration • Ecosystem Protection", "vocab": [[1, "arid", "adj", "/ˈærɪd/", "khô hạn, cằn cỗi", "dry, parched, barren"], [2, "fragile", "adj", "/ˈfrædʒaɪl/", "dễ bị tổn thương, yếu ớt", "delicate, vulnerable, sensitive"], [3, "subsoil", "n", "/ˈsʌbsɔɪl/", "lớp đất bên dưới", "underlying soil, lower stratum"], [4, "withstand", "v", "/wɪðˈstænd/", "chịu đựng, chống chịu", "endure, resist, tolerate"], [5, "drought", "n", "/draʊt/", "nạn hạn hán", "dry spell, lack of rain"], [6, "erosion", "n", "/ɪˈrəʊʒn/", "sự ăn mòn, sự sạt lở đất", "wearing away, degradation"], [7, "pod", "n", "/pɒd/", "vỏ hạt, quả đậu", "shell, casing, capsule"], [8, "bark", "n", "/bɑːk/", "vỏ cây", "tree covering, outer layer"], [9, "smallholding", "n", "/ˈsmɔːlhəʊldɪŋ/", "trang trại nhỏ", "small farm, plot of land"], [10, "ethnobotanist", "n", "/ˌeθnəʊˈbɒtənɪst/", "nhà thực vật học dân tộc", "plant scholar, plant expert"], [11, "prejudice", "n", "/ˈpredʒədɪs/", "định kiến, thành kiến", "bias, preconception, stigma"], [12, "aspirational", "adj", "/ˌæspəˈreɪʃənl/", "có tham vọng, muốn vươn lên", "ambitious, striving, motivated"], [13, "resuscitation", "n", "/rɪˌsʌsɪˈteɪʃn/", "sự hồi sinh, sự khôi phục", "revival, restoration, renewal"], [14, "reinstate", "v", "/ˌriːɪnˈsteɪt/", "phục hồi, khôi phục lại", "restore, bring back, re-establish"], [15, "sustainable", "adj", "/səˈsteɪnəbl/", "bền vững, thân thiện môi trường", "eco-friendly, renewable, viable"], [16, "syrup", "n", "/ˈsɪrəp/", "siro, mật", "thick liquid, nectar, molasses"], [17, "certified", "adj", "/ˈsɜːtɪfaɪd/", "được chứng nhận", "accredited, official, verified"], [18, "corridor", "n", "/ˈkɒrɪdɔː(r)/", "hành lang (sinh thái)", "passage, strip, connecting zone"], [19, "counteract", "v", "/ˌkaʊntərˈækt/", "chống lại, làm giảm tác động", "offset, neutralize, balance"], [20, "evaporation", "n", "/ɪˌvæpəˈreɪʃn/", "sự bay hơi", "drying up, vaporization"], [21, "refuge", "n", "/ˈrefjuːdʒ/", "nơi trú ẩn, khu bảo tồn", "shelter, sanctuary, haven"], [22, "bio-control", "n", "/ˌbaɪəʊkənˈtrəʊl/", "kiểm soát sinh học", "natural pest control"], [23, "expanse", "n", "/ɪkˈspæns/", "dải đất rộng lớn, khoảng rộng", "area, stretch, vastness"], [24, "exploit", "v", "/ɪkˈsplɔɪt/", "khai thác, tận dụng", "utilize, make use of, harness"], [25, "roll out", "v", "/rəʊl aʊt/", "triển khai rộng rãi", "launch, introduce, implement"]], "colloc": [[1, "arid valley", "thung lũng khô hạn"], [2, "fragile ecosystem", "hệ sinh thái dễ bị tổn thương"], [3, "deep water source", "nguồn nước ngầm sâu"], [4, "herbal remedy", "phương thuốc thảo dược"], [5, "international market", "thị trường quốc tế"], [6, "cultural resuscitation", "sự hồi sinh văn hóa"], [7, "sustainable income", "thu nhập bền vững"], [8, "certified organic farm", "trang trại hữu cơ được chứng nhận"], [9, "organic farmers' market", "chợ nông sản hữu cơ"], [10, "forest corridor", "hành lang rừng sinh thái"], [11, "water usage", "mức tiêu thụ nước"], [12, "message of hope", "thông điệp hy vọng"]], "questions": [{"stem": "The coastal strip of southern Peru is described as an extremely __________ environment due to the almost total absence of rainfall.", "options": ["fragile ecosystem", "herbal remedy", "certified organic farm", "sustainable income"], "correctIdx": 0, "explanation": "Vùng bờ biển thiếu mưa được gọi là 'fragile ecosystem' (hệ sinh thái dễ tổn thương).", "ghinho": "'fragile' = dễ tổn thương, đi với 'ecosystem' để chỉ môi trường mong manh."}, {"stem": "Thanks to its remarkably long root system, the native huarango tree can reach a __________ tens of metres underground.", "options": ["forest corridor", "message of hope", "international market", "deep water source"], "correctIdx": 3, "explanation": "Rễ cây huarango dài chạm tới 'deep water source' (nguồn nước ngầm sâu) dưới lòng đất.", "ghinho": "'deep water source' = nguồn nước ngầm sâu, liên quan tới hệ rễ dài."}, {"stem": "Clearing native forests destroys soil stability, which quickly leads to severe land __________ when heavy winds blow.", "options": ["erosion", "syrup", "corridor", "refuge"], "correctIdx": 0, "explanation": "Phá rừng làm mất ổn định đất, dẫn đến 'erosion' (sạt lở/xói mòn đất) khi có gió mạnh.", "ghinho": "'erosion' = sự xói mòn/ăn mòn đất, liên quan tới mất lớp đất mặt."}, {"stem": "Historically, local residents used different parts of the huarango tree as a __________ to treat various ailments.", "options": ["forest corridor", "water usage", "herbal remedy", "sustainable income"], "correctIdx": 2, "explanation": "Người dân dùng các bộ phận của cây huarango làm 'herbal remedy' (phương thuốc thảo dược) chữa bệnh.", "ghinho": "'remedy' = phương thuốc, đi với 'herbal' để chỉ thuốc từ thảo mộc."}, {"stem": "Large agricultural corporations have replaced ancient woodlands with vast monoculture fields targeting the __________.", "options": ["herbal remedy", "international market", "fragile ecosystem", "forest corridor"], "correctIdx": 1, "explanation": "Các công ty nông nghiệp thay rừng cổ bằng cánh đồng độc canh phục vụ 'international market' (thị trường quốc tế).", "ghinho": "'international market' = thị trường quốc tế, mục tiêu xuất khẩu của nông nghiệp quy mô lớn."}, {"stem": "To revive local interest in native plants, conservationists initiated a process of __________ through cultural festivals.", "options": ["water usage", "deep water source", "cultural resuscitation", "message of hope"], "correctIdx": 2, "explanation": "Các nhà bảo tồn khởi động 'cultural resuscitation' (sự hồi sinh văn hóa) qua lễ hội để khơi lại quan tâm tới cây bản địa.", "ghinho": "'resuscitation' = hồi sinh/khôi phục, đi với 'cultural' để chỉ phục hồi văn hóa."}, {"stem": "Turning huarango seed pods into edible flour and syrup offers local families a potential __________.", "options": ["herbal remedy", "sustainable income", "international market", "fragile ecosystem"], "correctIdx": 1, "explanation": "Biến quả huarango thành bột và siro mang lại 'sustainable income' (thu nhập bền vững) cho gia đình địa phương.", "ghinho": "'sustainable income' = thu nhập bền vững, lâu dài, thân thiện môi trường."}, {"stem": "Alberto Benevides sells his processed tree products at a famous __________ located in the capital city of Lima.", "options": ["certified organic farm", "forest corridor", "organic farmers' market", "deep water source"], "correctIdx": 2, "explanation": "Alberto Benevides bán sản phẩm tại 'organic farmers' market' (chợ nông sản hữu cơ) nổi tiếng ở Lima.", "ghinho": "'farmers' market' = chợ nông sản, đi với 'organic' để chỉ sản phẩm hữu cơ."}, {"stem": "Planting a continuous __________ across commercial farmland allows local wildlife to move freely between habitats.", "options": ["forest corridor", "herbal remedy", "water usage", "message of hope"], "correctIdx": 0, "explanation": "Trồng 'forest corridor' (hành lang rừng) liên tục giúp động vật hoang dã di chuyển giữa các môi trường sống.", "ghinho": "'corridor' = hành lang, đi với 'forest' để chỉ tuyến đường xanh nối các khu rừng."}, {"stem": "Shading crops with native trees helps lower overall __________ by significantly slowing moisture evaporation.", "options": ["message of hope", "water usage", "herbal remedy", "forest corridor"], "correctIdx": 1, "explanation": "Che bóng cây bản địa giúp giảm 'water usage' (mức tiêu thụ nước) do làm chậm sự bay hơi.", "ghinho": "'water usage' = mức tiêu thụ nước, liên quan tới 'evaporation' (bay hơi)."}, {"stem": "Successful reforestation in dry zones provides a powerful __________ for other drought-stricken areas around the globe.", "options": ["water usage", "deep water source", "fragile ecosystem", "message of hope"], "correctIdx": 3, "explanation": "Trồng rừng thành công ở vùng khô hạn là 'message of hope' (thông điệp hy vọng) cho các khu vực hạn hán khác.", "ghinho": "'message of hope' = thông điệp mang lại hy vọng, truyền cảm hứng."}, {"stem": "The word arid in the passage is closest in meaning to:", "options": ["dry", "humid", "fertile", "cold"], "correctIdx": 0, "explanation": "'Arid' nghĩa là khô hạn, đồng nghĩa 'dry'.", "ghinho": "arid = dry/parched/barren, trái nghĩa 'humid' (ẩm)."}, {"stem": "The word withstand in the passage is closest in meaning to:", "options": ["avoid", "cause", "endure", "prevent"], "correctIdx": 2, "explanation": "'Withstand' nghĩa là chịu đựng, đồng nghĩa 'endure'.", "ghinho": "withstand = endure/resist/tolerate."}, {"stem": "The word reinstate in the passage is closest in meaning to:", "options": ["destroy", "restore", "abandon", "criticize"], "correctIdx": 1, "explanation": "'Reinstate' nghĩa là phục hồi, đồng nghĩa 'restore'.", "ghinho": "reinstate = restore/bring back, trái nghĩa 'abandon' (từ bỏ)."}, {"stem": "The word refuge in the passage is closest in meaning to:", "options": ["hazard", "obstacle", "sanctuary", "target"], "correctIdx": 2, "explanation": "'Refuge' nghĩa là nơi trú ẩn, đồng nghĩa 'sanctuary'.", "ghinho": "refuge = shelter/sanctuary/haven."}, {"stem": "The word exploit is closest in meaning to:", "options": ["utilize", "waste", "ignore", "restrict"], "correctIdx": 0, "explanation": "'Exploit' nghĩa là khai thác/tận dụng, đồng nghĩa 'utilize'.", "ghinho": "exploit = utilize/harness/make use of."}, {"stem": "The word counteract is closest in meaning to:", "options": ["support", "offset", "accelerate", "ignore"], "correctIdx": 1, "explanation": "'Counteract' nghĩa là chống lại/làm giảm tác động, đồng nghĩa 'offset'.", "ghinho": "counteract = offset/neutralize/balance."}, {"stem": "The word fragile is closest in meaning to:", "options": ["robust", "stable", "delicate", "powerful"], "correctIdx": 2, "explanation": "'Fragile' nghĩa là dễ bị tổn thương/yếu ớt, đồng nghĩa 'delicate'.", "ghinho": "fragile = delicate/vulnerable/sensitive, trái nghĩa 'robust' (khỏe/vững)."}, {"stem": "The word prejudice is closest in meaning to:", "options": ["knowledge", "bias", "respect", "wisdom"], "correctIdx": 1, "explanation": "'Prejudice' nghĩa là định kiến, đồng nghĩa 'bias'.", "ghinho": "prejudice = bias/preconception/stigma."}, {"stem": "The word roll out is closest in meaning to:", "options": ["withdraw", "cancel", "implement", "delay"], "correctIdx": 2, "explanation": "'Roll out' nghĩa là triển khai rộng rãi, đồng nghĩa 'implement'.", "ghinho": "roll out = launch/introduce/implement."}], "flashcards": [{"front": "arid", "pos": "adj", "ipa": "/ˈærɪd/", "meaning": "khô hạn, cằn cỗi", "syn": "dry, parched, barren", "sentence": "Usage note: \"arid\" (adj) appears in the passage \"The Return of the Huarango\"."}, {"front": "fragile", "pos": "adj", "ipa": "/ˈfrædʒaɪl/", "meaning": "dễ bị tổn thương, yếu ớt", "syn": "delicate, vulnerable, sensitive", "sentence": "Usage note: \"fragile\" (adj) appears in the passage \"The Return of the Huarango\"."}, {"front": "subsoil", "pos": "n", "ipa": "/ˈsʌbsɔɪl/", "meaning": "lớp đất bên dưới", "syn": "underlying soil, lower stratum", "sentence": "Usage note: \"subsoil\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "withstand", "pos": "v", "ipa": "/wɪðˈstænd/", "meaning": "chịu đựng, chống chịu", "syn": "endure, resist, tolerate", "sentence": "Usage note: \"withstand\" (v) appears in the passage \"The Return of the Huarango\"."}, {"front": "drought", "pos": "n", "ipa": "/draʊt/", "meaning": "nạn hạn hán", "syn": "dry spell, lack of rain", "sentence": "Usage note: \"drought\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "erosion", "pos": "n", "ipa": "/ɪˈrəʊʒn/", "meaning": "sự ăn mòn, sự sạt lở đất", "syn": "wearing away, degradation", "sentence": "Usage note: \"erosion\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "pod", "pos": "n", "ipa": "/pɒd/", "meaning": "vỏ hạt, quả đậu", "syn": "shell, casing, capsule", "sentence": "Usage note: \"pod\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "bark", "pos": "n", "ipa": "/bɑːk/", "meaning": "vỏ cây", "syn": "tree covering, outer layer", "sentence": "Usage note: \"bark\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "smallholding", "pos": "n", "ipa": "/ˈsmɔːlhəʊldɪŋ/", "meaning": "trang trại nhỏ", "syn": "small farm, plot of land", "sentence": "Usage note: \"smallholding\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "ethnobotanist", "pos": "n", "ipa": "/ˌeθnəʊˈbɒtənɪst/", "meaning": "nhà thực vật học dân tộc", "syn": "plant scholar, plant expert", "sentence": "Usage note: \"ethnobotanist\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "prejudice", "pos": "n", "ipa": "/ˈpredʒədɪs/", "meaning": "định kiến, thành kiến", "syn": "bias, preconception, stigma", "sentence": "Usage note: \"prejudice\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "aspirational", "pos": "adj", "ipa": "/ˌæspəˈreɪʃənl/", "meaning": "có tham vọng, muốn vươn lên", "syn": "ambitious, striving, motivated", "sentence": "Usage note: \"aspirational\" (adj) appears in the passage \"The Return of the Huarango\"."}, {"front": "resuscitation", "pos": "n", "ipa": "/rɪˌsʌsɪˈteɪʃn/", "meaning": "sự hồi sinh, sự khôi phục", "syn": "revival, restoration, renewal", "sentence": "Usage note: \"resuscitation\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "reinstate", "pos": "v", "ipa": "/ˌriːɪnˈsteɪt/", "meaning": "phục hồi, khôi phục lại", "syn": "restore, bring back, re-establish", "sentence": "Usage note: \"reinstate\" (v) appears in the passage \"The Return of the Huarango\"."}, {"front": "sustainable", "pos": "adj", "ipa": "/səˈsteɪnəbl/", "meaning": "bền vững, thân thiện môi trường", "syn": "eco-friendly, renewable, viable", "sentence": "Usage note: \"sustainable\" (adj) appears in the passage \"The Return of the Huarango\"."}, {"front": "syrup", "pos": "n", "ipa": "/ˈsɪrəp/", "meaning": "siro, mật", "syn": "thick liquid, nectar, molasses", "sentence": "Usage note: \"syrup\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "certified", "pos": "adj", "ipa": "/ˈsɜːtɪfaɪd/", "meaning": "được chứng nhận", "syn": "accredited, official, verified", "sentence": "Usage note: \"certified\" (adj) appears in the passage \"The Return of the Huarango\"."}, {"front": "corridor", "pos": "n", "ipa": "/ˈkɒrɪdɔː(r)/", "meaning": "hành lang (sinh thái)", "syn": "passage, strip, connecting zone", "sentence": "Usage note: \"corridor\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "counteract", "pos": "v", "ipa": "/ˌkaʊntərˈækt/", "meaning": "chống lại, làm giảm tác động", "syn": "offset, neutralize, balance", "sentence": "Usage note: \"counteract\" (v) appears in the passage \"The Return of the Huarango\"."}, {"front": "evaporation", "pos": "n", "ipa": "/ɪˌvæpəˈreɪʃn/", "meaning": "sự bay hơi", "syn": "drying up, vaporization", "sentence": "Usage note: \"evaporation\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "refuge", "pos": "n", "ipa": "/ˈrefjuːdʒ/", "meaning": "nơi trú ẩn, khu bảo tồn", "syn": "shelter, sanctuary, haven", "sentence": "Usage note: \"refuge\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "bio-control", "pos": "n", "ipa": "/ˌbaɪəʊkənˈtrəʊl/", "meaning": "kiểm soát sinh học", "syn": "natural pest control", "sentence": "Usage note: \"bio-control\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "expanse", "pos": "n", "ipa": "/ɪkˈspæns/", "meaning": "dải đất rộng lớn, khoảng rộng", "syn": "area, stretch, vastness", "sentence": "Usage note: \"expanse\" (n) appears in the passage \"The Return of the Huarango\"."}, {"front": "exploit", "pos": "v", "ipa": "/ɪkˈsplɔɪt/", "meaning": "khai thác, tận dụng", "syn": "utilize, make use of, harness", "sentence": "Usage note: \"exploit\" (v) appears in the passage \"The Return of the Huarango\"."}, {"front": "roll out", "pos": "v", "ipa": "/rəʊl aʊt/", "meaning": "triển khai rộng rãi", "syn": "launch, introduce, implement", "sentence": "Usage note: \"roll out\" (v) appears in the passage \"The Return of the Huarango\"."}, {"front": "arid valley", "pos": "collocation", "ipa": "", "meaning": "thung lũng khô hạn", "syn": "", "sentence": "Usage note: the collocation \"arid valley\" is used in the passage \"The Return of the Huarango\"."}, {"front": "fragile ecosystem", "pos": "collocation", "ipa": "", "meaning": "hệ sinh thái dễ bị tổn thương", "syn": "", "sentence": "Usage note: the collocation \"fragile ecosystem\" is used in the passage \"The Return of the Huarango\"."}, {"front": "deep water source", "pos": "collocation", "ipa": "", "meaning": "nguồn nước ngầm sâu", "syn": "", "sentence": "Usage note: the collocation \"deep water source\" is used in the passage \"The Return of the Huarango\"."}, {"front": "herbal remedy", "pos": "collocation", "ipa": "", "meaning": "phương thuốc thảo dược", "syn": "", "sentence": "Usage note: the collocation \"herbal remedy\" is used in the passage \"The Return of the Huarango\"."}, {"front": "international market", "pos": "collocation", "ipa": "", "meaning": "thị trường quốc tế", "syn": "", "sentence": "Usage note: the collocation \"international market\" is used in the passage \"The Return of the Huarango\"."}, {"front": "cultural resuscitation", "pos": "collocation", "ipa": "", "meaning": "sự hồi sinh văn hóa", "syn": "", "sentence": "Usage note: the collocation \"cultural resuscitation\" is used in the passage \"The Return of the Huarango\"."}, {"front": "sustainable income", "pos": "collocation", "ipa": "", "meaning": "thu nhập bền vững", "syn": "", "sentence": "Usage note: the collocation \"sustainable income\" is used in the passage \"The Return of the Huarango\"."}, {"front": "certified organic farm", "pos": "collocation", "ipa": "", "meaning": "trang trại hữu cơ được chứng nhận", "syn": "", "sentence": "Usage note: the collocation \"certified organic farm\" is used in the passage \"The Return of the Huarango\"."}, {"front": "organic farmers' market", "pos": "collocation", "ipa": "", "meaning": "chợ nông sản hữu cơ", "syn": "", "sentence": "Usage note: the collocation \"organic farmers' market\" is used in the passage \"The Return of the Huarango\"."}, {"front": "forest corridor", "pos": "collocation", "ipa": "", "meaning": "hành lang rừng sinh thái", "syn": "", "sentence": "Usage note: the collocation \"forest corridor\" is used in the passage \"The Return of the Huarango\"."}, {"front": "water usage", "pos": "collocation", "ipa": "", "meaning": "mức tiêu thụ nước", "syn": "", "sentence": "Usage note: the collocation \"water usage\" is used in the passage \"The Return of the Huarango\"."}, {"front": "message of hope", "pos": "collocation", "ipa": "", "meaning": "thông điệp hy vọng", "syn": "", "sentence": "Usage note: the collocation \"message of hope\" is used in the passage \"The Return of the Huarango\"."}]};
+
+let currentQ = 0;
+let answers = new Array(DATA.questions.length).fill(null);
+let officialSubmitted = false;
+let lastResultPayload = null;
+
+function id(x){ return document.getElementById(x); }
+
+function initVocab(){
+  const tbody = id("vocabBody");
+  DATA.vocab.forEach(v=>{
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${v[0]}</td><td>${v[1]}</td><td>${v[2]}</td><td>${v[3]}</td><td>${v[4]}</td><td>${v[5]}</td>`;
+    tbody.appendChild(tr);
+  });
+  const ctbody = id("collocBody");
+  DATA.colloc.forEach(c=>{
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${c[0]}</td><td>${c[1]}</td><td>${c[2]}</td>`;
+    ctbody.appendChild(tr);
+  });
+  id("vocabSearch").addEventListener("input", filterVocab);
+}
+
+function filterVocab(){
+  const q = id("vocabSearch").value.toLowerCase();
+  document.querySelectorAll("#vocabBody tr").forEach(tr=>{ tr.style.display = tr.textContent.toLowerCase().includes(q) ? "" : "none"; });
+  document.querySelectorAll("#collocBody tr").forEach(tr=>{ tr.style.display = tr.textContent.toLowerCase().includes(q) ? "" : "none"; });
+}
+
+function startPractice(){
+  id("vocabSection").classList.add("hidden");
+  id("quizSection").classList.remove("hidden");
+  renderQuestion();
+  id("quizSection").scrollIntoView({behavior:"smooth"});
+}
+
+function renderQuestion(){
+  const q = DATA.questions[currentQ];
+  id("qProgress").textContent = `Question ${currentQ+1} of ${DATA.questions.length}`;
+  id("qStem").textContent = q.stem;
+  const optWrap = id("qOptions");
+  optWrap.innerHTML = "";
+  const letters = ["A","B","C","D"];
+  q.options.forEach((opt,i)=>{
+    const label = document.createElement("label");
+    label.innerHTML = `<input type="radio" name="opt" value="${i}" ${answers[currentQ]===i?"checked":""}> ${letters[i]}. ${opt}`;
+    label.querySelector("input").addEventListener("change", ()=>{ answers[currentQ]=i; });
+    optWrap.appendChild(label);
+  });
+  id("prevBtn").disabled = currentQ===0;
+  id("nextBtn").classList.toggle("hidden", currentQ>=DATA.questions.length-1);
+  id("submitQuizBtn").classList.toggle("hidden", currentQ!==DATA.questions.length-1);
+  id("quizError").textContent = "";
+}
+
+function goPrev(){ if(currentQ>0){ currentQ--; renderQuestion(); } }
+function goNext(){ if(currentQ<DATA.questions.length-1){ currentQ++; renderQuestion(); } }
+
+function submitQuiz(){
+  const unanswered = [];
+  answers.forEach((a,i)=>{ if(a===null) unanswered.push(i+1); });
+  if(unanswered.length>0){
+    currentQ = unanswered[0]-1;
+    renderQuestion();
+    id("quizError").textContent = `Please answer all questions before submitting. Unanswered: Question ${unanswered.join(", ")}.`;
+    return;
+  }
+  showResults();
+}
+
+function showResults(){
+  id("quizSection").classList.add("hidden");
+  id("resultsSection").classList.remove("hidden");
+  let correctCount = 0;
+  const letters = ["A","B","C","D"];
+  const reviewWrap = id("reviewWrap");
+  reviewWrap.innerHTML = "";
+  DATA.questions.forEach((q,i)=>{
+    const isCorrect = answers[i]===q.correctIdx;
+    if(isCorrect) correctCount++;
+    const div = document.createElement("div");
+    div.className = `qcard review-card ${isCorrect?"correct":"incorrect"}`;
+    let html = `<div class="qstem">Question ${i+1}: ${q.stem}</div>
+      <div>Your answer: <strong>${letters[answers[i]]}. ${q.options[answers[i]]}</strong> <span class="result-badge ${isCorrect?"badge-correct":"badge-incorrect"}">${isCorrect?"Correct":"Incorrect"}</span></div>`;
+    if(!isCorrect){
+      html += `<div>Correct answer: <strong>${letters[q.correctIdx]}. ${q.options[q.correctIdx]}</strong></div>
+      <div class="explain">${q.explanation}<div class="ghinho">${q.ghinho}</div></div>`;
+    }
+    div.innerHTML = html;
+    reviewWrap.appendChild(div);
+  });
+  const total = DATA.questions.length;
+  const pct = Math.round((correctCount/total)*1000)/10;
+  id("scoreText").textContent = `${correctCount} / ${total} correct`;
+  id("scorePct").textContent = `${pct}%`;
+  lastResultPayload = { correctCount, total, pct, answers: answers.slice() };
+  id("resultsSection").scrollIntoView({behavior:"smooth"});
+}
+
+function retakeQuiz(){
+  currentQ = 0;
+  answers = new Array(DATA.questions.length).fill(null);
+  id("resultsSection").classList.add("hidden");
+  id("quizSection").classList.remove("hidden");
+  renderQuestion();
+}
+
+function buildReviewSummary(){
+  const letters = ["A","B","C","D"];
+  return DATA.questions.map((q,i)=>{
+    const isCorrect = answers[i]===q.correctIdx;
+    return `Q${i+1}: selected=${letters[answers[i]]} (${q.options[answers[i]]}) correct=${letters[q.correctIdx]} (${q.options[q.correctIdx]}) ${isCorrect?"CORRECT":"INCORRECT"}`;
+  }).join("\n");
+}
+
+function buildCorrectionsSummary(){
+  const lines = [];
+  DATA.questions.forEach((q,i)=>{
+    if(answers[i]!==q.correctIdx) lines.push(`Q${i+1}: ${q.explanation} ${q.ghinho}`);
+  });
+  return lines.length ? lines.join("\n\n") : "No incorrect answers.";
+}
+
+async function submitOfficial(e){
+  e.preventDefault();
+  const name = id("studentName").value.trim();
+  const cls = id("studentClass").value.trim();
+  const errEl = id("submitError");
+  errEl.textContent = "";
+  if(!name || !cls){ errEl.textContent = "Full name and class are both required."; return; }
+  const btn = id("officialSubmitBtn");
+  btn.disabled = true;
+  id("submitProgress").textContent = "Submitting your official result, please wait...";
+  id("submitProgress").className = "form-msg";
+  const now = new Date();
+  const timestamp = now.toLocaleString();
+  const letters = ["A","B","C","D"];
+  const selectedList = answers.map((a,i)=>`Q${i+1}:${letters[a]}`).join(", ");
+  const correctList = DATA.questions.map((q,i)=>`Q${i+1}:${letters[q.correctIdx]}`).join(", ");
+  const formData = new FormData();
+  formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+  formData.append("subject", `CAM R1 Vocab Submission | ${DATA.id} - ${DATA.title} | ${name}`);
+  formData.append("from_name", "CAM R1 Vocab - Animals");
+  formData.append("Student Full Name", name);
+  formData.append("Class", cls);
+  formData.append("Lesson Identifier", DATA.id);
+  formData.append("Lesson Title", DATA.title);
+  formData.append("Topic", DATA.topic);
+  formData.append("Score", `${lastResultPayload.correctCount}/${lastResultPayload.total}`);
+  formData.append("Percentage", `${lastResultPayload.pct}%`);
+  formData.append("Submission Timestamp (local)", timestamp);
+  formData.append("All Selected Answers", selectedList);
+  formData.append("All Correct Answers", correctList);
+  formData.append("Answer Review Summary", buildReviewSummary());
+  formData.append("Corrections Summary", buildCorrectionsSummary());
+  try{
+    const res = await fetch("https://api.web3forms.com/submit", { method:"POST", body: formData });
+    const data = await res.json();
+    if(data.success){
+      officialSubmitted = true;
+      id("submitProgress").textContent = `Officially submitted. ${name}, your result for ${DATA.title} (${lastResultPayload.correctCount}/${lastResultPayload.total}) was sent at ${timestamp}.`;
+      id("submitProgress").className = "form-msg ok";
+      id("sessionNote").classList.remove("hidden");
+      unlockFlashcards();
+    } else { throw new Error(data.message || "Unknown error"); }
+  } catch(err){
+    id("submitProgress").textContent = "Submission failed. Your results are preserved - please check your connection and try again.";
+    id("submitProgress").className = "form-msg err";
+  } finally { btn.disabled = false; }
+}
+
+let flashIndex = 0;
+let flashOrder = [];
+let flashFlipped = false;
+
+function unlockFlashcards(){
+  id("flashLocked").classList.add("hidden");
+  id("flashSection").classList.remove("hidden");
+  flashOrder = DATA.flashcards.map((_,i)=>i);
+  flashIndex = 0;
+  renderFlash();
+}
+
+function renderFlash(){
+  flashFlipped = false;
+  const card = DATA.flashcards[flashOrder[flashIndex]];
+  id("flashProgress").textContent = `Card ${flashIndex+1} of ${flashOrder.length}`;
+  id("flashCard").innerHTML = `<div>${card.front}</div>`;
+  id("flashCard").setAttribute("aria-label", `Flashcard front: ${card.front}. Press Enter or Space to flip.`);
+}
+
+function flipFlash(){
+  const card = DATA.flashcards[flashOrder[flashIndex]];
+  flashFlipped = !flashFlipped;
+  if(flashFlipped){
+    id("flashCard").innerHTML = `<div class="flash-back">
+      ${card.pos?`<div><strong>Part of speech:</strong> ${card.pos}</div>`:""}
+      ${card.ipa?`<div><strong>IPA:</strong> ${card.ipa}</div>`:""}
+      <div><strong>Meaning:</strong> ${card.meaning}</div>
+      ${card.syn?`<div><strong>Synonyms:</strong> ${card.syn}</div>`:""}
+      <div><strong>Note:</strong> ${card.sentence}</div>
+    </div>`;
+  } else { id("flashCard").innerHTML = `<div>${card.front}</div>`; }
+}
+
+function flashNext(){ flashIndex = (flashIndex+1)%flashOrder.length; renderFlash(); }
+function flashPrev(){ flashIndex = (flashIndex-1+flashOrder.length)%flashOrder.length; renderFlash(); }
+function flashShuffle(){
+  for(let i=flashOrder.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [flashOrder[i],flashOrder[j]]=[flashOrder[j],flashOrder[i]]; }
+  flashIndex=0; renderFlash();
+}
+function flashReset(){ flashOrder = DATA.flashcards.map((_,i)=>i); flashIndex=0; renderFlash(); }
+
+document.addEventListener("DOMContentLoaded", initVocab);
+id("startPracticeBtn").addEventListener("click", startPractice);
+id("prevBtn").addEventListener("click", goPrev);
+id("nextBtn").addEventListener("click", goNext);
+id("submitQuizBtn").addEventListener("click", submitQuiz);
+id("retakeBtn").addEventListener("click", retakeQuiz);
+id("officialForm").addEventListener("submit", submitOfficial);
+id("flashCard").addEventListener("click", flipFlash);
+id("flashCard").addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); flipFlash(); } });
+id("flashNextBtn").addEventListener("click", flashNext);
+id("flashPrevBtn").addEventListener("click", flashPrev);
+id("flashShuffleBtn").addEventListener("click", flashShuffle);
+id("flashResetBtn").addEventListener("click", flashReset);
+</script>
+</body>
+</html>

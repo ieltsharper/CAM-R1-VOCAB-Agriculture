@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAM R1 Vocab - Agriculture</title>
+<style>:root{--bg:#f7f6f2;--navy:#12233f;--navy2:#1c3358;--blue:#2f5fa8;--blue-light:#e7edf7;--border:#d8dde5;--text:#26313f;--muted:#5b6675;--danger:#a3312a;--good:#1f7a4d;--bad:#a3312a;--focus:#1857a4}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+.wrap{max-width:960px;margin:0 auto;padding:24px 20px 64px}
+header.top{background:var(--navy);color:#fff;padding:22px 20px}
+header.top .inner{max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
+header.top h1{font-size:1.35rem;margin:0;font-weight:700}
+header.top p{margin:4px 0 0;color:#c9d4e6;font-size:.92rem}
+a.backlink,button.backlink{display:inline-block;background:transparent;border:1px solid #7f93b4;color:#fff;padding:8px 14px;border-radius:6px;text-decoration:none;font-size:.88rem}
+a.backlink:hover,button.backlink:hover{background:#22406e}
+h2{color:var(--navy);font-size:1.18rem;border-bottom:2px solid var(--blue-light);padding-bottom:8px;margin-top:34px}
+h3{color:var(--navy2);font-size:1.02rem}
+.card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:16px 0}
+.panel{background:var(--blue-light);border:1px solid #c7d5ec;border-radius:10px;padding:16px 18px;margin:16px 0;font-size:.94rem}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:10px}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--navy);color:#fff;font-weight:600;position:sticky;top:0}
+tr:nth-child(even) td{background:#fafbfc}
+input[type=search],input[type=text]{padding:9px 12px;border:1px solid var(--border);border-radius:6px;width:100%;font-size:.95rem}
+input[type=search]:focus,input[type=text]:focus,button:focus,a:focus,input[type=radio]:focus{outline:3px solid var(--focus);outline-offset:2px}
+button{cursor:pointer;font-size:.95rem;font-family:inherit}
+.btn-primary{background:var(--blue);color:#fff;border:none;padding:11px 22px;border-radius:6px;font-weight:600}
+.btn-primary:hover{background:var(--navy2)}
+.btn-primary:disabled{background:#93a4bd;cursor:not-allowed}
+.btn-secondary{background:#fff;color:var(--blue);border:1px solid var(--blue);padding:10px 20px;border-radius:6px;font-weight:600}
+.btn-secondary:hover{background:var(--blue-light)}
+.btn-secondary:disabled{color:#9aa6b5;border-color:#c7cdd6;cursor:not-allowed}
+.hidden{display:none!important}
+.qcard{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:14px 0}
+.qcard.unanswered{border-color:var(--danger)}
+.qstem{font-weight:600;margin-bottom:12px}
+.options label{display:block;background:#fafbfc;border:1px solid var(--border);border-radius:6px;padding:9px 12px;margin:6px 0;cursor:pointer}
+.options label:hover{border-color:var(--blue)}
+.options input{margin-right:9px}
+.progress{color:var(--muted);font-size:.9rem;margin-bottom:6px}
+.nav-row{display:flex;justify-content:space-between;gap:10px;margin-top:16px;flex-wrap:wrap}
+.error-msg{color:var(--danger);font-weight:600;font-size:.88rem;margin-top:6px}
+.result-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-weight:700;font-size:.82rem}
+.badge-correct{background:#e2f3e9;color:var(--good)}
+.badge-incorrect{background:#f8e7e5;color:var(--bad)}
+.review-card{border-left:4px solid var(--border)}
+.review-card.correct{border-left-color:var(--good)}
+.review-card.incorrect{border-left-color:var(--bad)}
+.explain{background:#fdf6ee;border:1px solid #eadfc9;border-radius:6px;padding:10px 12px;margin-top:10px;font-size:.9rem}
+.ghinho{font-weight:600;color:var(--navy2);margin-top:6px}
+.score-banner{background:var(--navy);color:#fff;border-radius:10px;padding:20px;text-align:center;margin:20px 0}
+.score-banner .big{font-size:2.1rem;font-weight:800}
+label.field{display:block;margin:12px 0;font-weight:600;font-size:.9rem}
+label.field input{display:block;margin-top:6px;font-weight:400;width:100%;max-width:420px}
+.form-msg{margin-top:12px;font-weight:600}
+.form-msg.ok{color:var(--good)}
+.form-msg.err{color:var(--bad)}
+.flash-lock{color:var(--muted);font-style:italic}
+.flashcard{background:#fff;border:1px solid var(--border);border-radius:12px;min-height:220px;display:flex;align-items:center;justify-content:center;text-align:center;padding:26px;cursor:pointer;font-size:1.1rem;margin:16px 0}
+.flashcard:focus{outline:3px solid var(--focus)}
+.flash-back{font-size:.92rem;text-align:left}
+.flash-back div{margin:4px 0}
+.flash-controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+footer.note{color:var(--muted);font-size:.85rem;margin-top:40px;border-top:1px solid var(--border);padding-top:14px}
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+@media (max-width:600px){table,thead,tbody,th,td,tr{font-size:.82rem}th,td{padding:6px 6px}}
+.lesson-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.lesson-card h3{margin:0;font-size:1.05rem}
+.lesson-card .meta{font-size:.85rem;color:var(--muted)}
+.lesson-card .stats{display:flex;gap:12px;font-size:.82rem;color:var(--navy2);flex-wrap:wrap}
+.start-btn{margin-top:auto;background:var(--blue);color:#fff;text-align:center;padding:10px;border-radius:6px;text-decoration:none;font-weight:700}
+.start-btn:hover{background:var(--navy2)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="inner">
+    <div>
+      <h1>CAM R1 Vocab - Agriculture</h1>
+      <p>4 IELTS Reading vocabulary lessons on agriculture &amp; economics topics</p>
+    </div>
+  </div>
+</header>
+<div class="wrap">
+  <section class="panel">
+    Choose a lesson card below to review its vocabulary, take its quiz, and see corrected results with Vietnamese explanations.
+    <strong>Email submission via Web3Forms is the only official completion record</strong> for any lesson. Finishing a quiz in your browser, or seeing a "submission confirmed in this browser session" note, is <strong>not</strong> proof of completion on its own &mdash; only a successful email sent to the teacher counts officially. Flashcards for each lesson unlock only after that lesson's official submission succeeds.
+  </section>
+
+  <h2>Lessons (4)</h2>
+  <div class="grid-cards">
+    <div class="lesson-card">
+      <h3>CAM 12 - TEST 2 &middot; The Risks Agriculture Faces in Developing Countries</h3>
+      <div class="meta">Topic: History • Archaeology</div>
+      <div class="stats">
+        <span>Vocabulary: 25</span>
+        <span>Collocations: 12</span>
+        <span>Questions: 20</span>
+      </div>
+      <a class="start-btn" href="cam-12-test-2-reading-passage-1-risks-agriculture.html">Start Lesson &rarr;</a>
+    </div>
+    <div class="lesson-card">
+      <h3>CAM 15 - TEST 1 &middot; Nutmeg - A Valuable Spice</h3>
+      <div class="meta">Topic: Agricultural History • Global Trade Networks • Colonial Monopolies</div>
+      <div class="stats">
+        <span>Vocabulary: 25</span>
+        <span>Collocations: 12</span>
+        <span>Questions: 20</span>
+      </div>
+      <a class="start-btn" href="cam-15-test-1-reading-passage-1-nutmeg.html">Start Lesson &rarr;</a>
+    </div>
+    <div class="lesson-card">
+      <h3>CAM 15 - TEST 4 &middot; The Return of the Huarango</h3>
+      <div class="meta">Topic: Conservation & Ecology • Native Species Restoration • Ecosystem Protection</div>
+      <div class="stats">
+        <span>Vocabulary: 25</span>
+        <span>Collocations: 12</span>
+        <span>Questions: 20</span>
+      </div>
+      <a class="start-btn" href="cam-15-test-4-reading-passage-1-huarango.html">Start Lesson &rarr;</a>
+    </div>
+    <div class="lesson-card">
+      <h3>CAM 18 - TEST 1 &middot; Urban Farming</h3>
+      <div class="meta">Topic: Agriculture • Sustainable Technology • Urban Planning • Food Security</div>
+      <div class="stats">
+        <span>Vocabulary: 25</span>
+        <span>Collocations: 12</span>
+        <span>Questions: 20</span>
+      </div>
+      <a class="start-btn" href="cam-18-test-1-reading-passage-1-urban-farming.html">Start Lesson &rarr;</a>
+    </div>
+  </div>
+
+  <footer class="note">
+    All lesson pages are self-contained HTML files with no external frameworks, logins, or databases. Keep every file in the same folder as this dashboard so the Back to Dashboard and Start Lesson links work correctly.
+  </footer>
+</div>
+</body>
+</html>
